@@ -1,0 +1,91 @@
+.footer-sector {
+    display: flex;
+    gap: 10px;
+    background: var(--Global-Gray-Gray-90);
+    justify-content: center;
+    align-content: center;
+  }
+
+  .footer-container {
+    display: flex;
+    width: 85%;
+    padding: 72px 0;
+    gap: 18px;
+    align-self: stretch;
+    justify-content: space-between;
+    color: #FFF;
+  }
+  
+  .contact-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .label-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .addres-text{
+    color: #FFF;
+    font-family: "AA Stetica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; 
+  }
+
+  .addres-head {
+    color: #FFF;
+    font-family: "AA Stetica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .label-contact {
+    margin-top: 40px;
+  }
+
+  .reg {
+    display: flex;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    color: var(--Global-white, #FFF);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .contact-block {
+    align-items: center;
+    }
+
+    .addres-text {
+    text-align: center;
+    }
+
+    .mobile-hidd {
+      display: none !important;
+    }
+    
+}  

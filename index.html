@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Animation  -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+
+  <!-- Hero Section   style="height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://c.animaapp.com/mehkbowzCV7nvE/img/chom-01-1.png') center/cover; -->
+  <section class="hero-section d-flex align-items-end justify-content-end">
+    <div class="container-fluid hero-conteiner text-center text-white">
+        <div class="col-lg-10 hero-mobile" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4 fade-in hero-mobile-btns">
+            <button class="btn btn-outline-light btn-lg me-3 hero-mobile-btn">Расписание</button>
+            <button class="btn btn-success btn-lg hero-mobile-sbtn">Записаться</button>
+          </div>
+          <h1 class="display-5 mb-4 fade-in hero-header-mobile" style="animation-delay: 0.2s;">
+            Приглашаем на практики в старейший в Москве Клуб этнических практик ИНБИ
+          </h1>
+        </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="py-custom d-flex flex-column justify-content-center align-items-center gap-5 mb-0 stat-mobile-sec">
+    <div class="col-10 mx-aut mt-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-center mb-5 fade-in">
+        <img src="./src/images/inbi_logo_big.png" alt="ИНБИ Logo" class="img-fluid" style="max-height: 157px;">
+      </div>
+      
+      <div class="row g-18 mb-5 mt-5 fade-in stat-mobile-cards" style="animation-delay: 0.2s;">
+        <div class="col-lg-3 col-md-6 stat-mobile-cards-cont">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <h3 class="card-title h2 mb-4">1987</h3>
+              <p class="card-text">Год открытия первого в Москве этнического клуба ИНБИ. Мы по праву можем назвать себя первыми, кто стал преподавать восточные практики на территории России.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 stat-mobile-cards-cont">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <h3 class="card-title h2 mb-4">15 филиалов</h3>
+              <p class="card-text">Именно такое колличество филиалов насчитывает международная сеть клубов INBI WORD, три из которых находятся за рубежом (Аргентина, Болгария, Эстония)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 stat-mobile-cards-cont">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <h3 class="card-title h2 mb-4">350 человек</h3>
+              <p class="card-text">Именно такое колличество действительных членов Клуба насчитывает пространство. ИНБИ по всему мирую, практический опыт многих превышает 20 лет.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 stat-mobile-cards-cont">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <h3 class="card-title h2 mb-4">20 лет</h3>
+              <p class="card-text">И все это время в нем ежедневно проходят различные занятия и практики, направленные на развитие человека. Пространство клуба в буквальном смысле наполнено духом совершенствования.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center fade-in" style="animation-delay: 0.4s;">
+        <h2 class="display-6 mb-4">35 лет преподаем практики для развития и совершенствования человека</h2>
+        <img src="https://c.animaapp.com/mehkbowzCV7nvE/img/group-1.png" alt="Decorative" class="img-fluid mt-72" style="max-height: 60px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section id="events" class="py-5 d-flex flex-column justify-content-center align-items-center gap-5">
+    <div class="col-10 mx-aut mt-0 " data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-center display-5 mb-5 fade-in event-hed-mobile">Скоро</h2>
+
+        <div style="display: flex; align-items: center;" class="event-mobile-div">
+        <div>        
+          <button id="prevBtn" class="pr-btn-hmoobile">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1165_3505)">
+            <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1165_3505">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </button>
+      </div>  
+
+        <div class="swiper mySwiper" style="padding: 10px;">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="swiper-slide">
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="swiper-slide">
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="swiper-slide">
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">43 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="event-mbtns">
+          <button id="prevBtn1" class="events-mobile-Hprbtn">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1165_3505)">
+            <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1165_3505">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+            </svg>
+          </button>  
+          <button id="nextBtn">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z" />
+              </svg>
+          </button>
+        </div> 
+        </div>
+        <div class="text-center fade-in mt-72" style="animation-delay: 0.4s;">
+            <button class="btn-more btn-link">Все мероприятия</button>
+        </div>  
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section class="py-5" style="justify-items: center;align-items: center;display: grid;">
+    <div class="method-cont">
+      <div class="row align-items-center method-cont-sub" style="justify-content: center; width: 100%;">
+        <div class="col-lg-6 fade-in method-div" style="justify-content: center; width: 100%;">
+          <h2 class="display-6 text-method mb-72" data-aos="fade" data-aos-delay="400">
+            Наш подход в развитии человека основан на методе, базирующимся на 5 принципах.
+          </h2>
+
+            <div class="position-relative text-center method-mob-img">
+              <img src="./src/images/method.png" class="method-img">
+            </div>
+
+          <div class="text-center" data-aos="fade" data-aos-delay="400">
+            <button class="btn-more btn-link">
+              Подробнее о методе
+            </button>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-in method-desc-img" style="animation-delay: 0.2s; display: flex;">
+          <div class="position-relative text-center " data-aos="fade" data-aos-delay="800">
+            <img src="./src/images/method.png" class="method-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practices Section -->
+  <section id="practices" class="section-swapper">
+    <div class="container-swapper " data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-center display-5 mb-5 fade-in event-hed-mobile">Направления занятий</h2>
+        
+        <div class="div-swapper event-mobile-div">
+            <button id="prevBtnPr" class="pr-btn-hmoobile">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1165_3505)">
+                <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1165_3505">
+                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </button>
+            <div class="swiper mySwiperPr" style="padding: 10px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="pr-card-video-conteiner">
+                            <div class="practice-video-card">
+                            <h4 class="h3">Видео</h4>
+                            </div>
+                            <button class="practiceBtn">Даосская алхимия</button>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <div class="pr-card-video-conteiner">
+                            <div class="practice-video-card">
+                            <h4 class="h3">Видео</h4>
+                            </div>
+                            <button class="practiceBtn">Искусство развития мозга</button>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <div class="pr-card-video-conteiner">
+                            <div class="practice-video-card">
+                            <h4 class="h3">Видео</h4>
+                            </div>
+                            <button class="practiceBtn">Индийская алхимия</button>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <div class="pr-card-video-conteiner">
+                            <div class="practice-video-card">
+                            <h4 class="h3">Видео</h4>
+                            </div>
+                            <button class="practiceBtn">Тайци-цюань</button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="pr-card-video-conteiner">
+                            <div class="practice-video-card">
+                            <h4 class="h3">Видео</h4>
+                            </div>
+                            <button class="practiceBtn">Тайци-цигун</button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="event-mbtns">
+              <button id="prevBtnPr1" class="events-mobile-Hprbtn">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1165_3505)">
+                <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1165_3505">
+                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </button>
+            <button id="nextBtnPr">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z"/>
+                </svg>
+            </button>             
+            </div>
+        </div>
+        <div class="text-center fade-in" style="animation-delay: 0.4s; padding: 72px;">
+            <button class="btn-more btn-link">Все практики</button>
+        </div>
+    </div>    
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-sec">
+      <div class="main-container-benefits">
+        <div class="photo-container-left" data-aos="fade-right-custom" data-aos-delay="500">
+        </div>
+        
+        <div class="container-info" data-aos="fade-left" data-aos-delay="1700">
+          <div class="sub-container-info">
+
+            <div class="info-block">
+              <p class="text-success">Групповые занятия в зале и онлайн</p>
+            </div>
+            
+            <div class="info-block">
+              <p class="text-success">Мастера с 20-летним опытом практики</p>
+            </div>
+            
+            <div class="info-block">
+              <p class="text-success">Семинары и мероприятия для углубления знаний</p>
+            </div>
+            
+            <div class="info-block-noBr">
+                <div class="info-block-noBr-sub">
+                  <p>Запишитесь на пробное занятие!</p>
+                  <button class="btnwrt">Записаться</button>
+                </div class="info-block-noBr-sub">  
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="info-block-noBr-sub-m">
+        <p>Запишитесь на пробное занятие!</p>
+        <button class="btnwrt">Записаться</button>
+      </div >  
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-sec">
+    <div class="main-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container-info-features" data-aos="fade" data-aos-delay="1700">
+            <div class="features-card">
+              <img src="./src/icons/garm.svg" alt="Harmony" class="mb-3" style="height: 80px;">
+              <p class="features-header">ГАРМОНИЯ</p>
+              <p class="text-features">Гаромоничное психофизиологическое состояние организма, обретение состояния баланса и центрированности</p>
+            </div>
+            
+            <div class="features-card">
+              <img src="./src/icons/sover.svg" alt="Improvement" class="mb-3" style="height: 80px;">
+              <p class="features-header">СОВРЕШЕНСТВОВАНИЕ</p>
+              <p class="text-features">Востановление связей внутри тела, снятие зажимов и блокировок, повышение энергоемности тела</p>
+            </div>
+            
+            <div class="features-card">
+              <img src="./src/icons/heart1.svg" alt="Health" class="mb-3" style="height: 80px;">
+              <p class="features-header">ЗДОРОВЬЕ</p>
+              <p class="text-features">Оздоровление систем тела: мышечной, сухожильной, костной, кожной, артериальной</p>
+            </div>
+            
+            <div class="features-card">
+              <img src="./src/icons/mozg.svg" alt="Brain Development" class="mb-3" style="height: 80px;">
+              <p class="features-header">РАЗВИТИЕ МОЗГА</p>
+              <p class="text-features">Реализация возможностей мозга, активация спящих отделов, синхронизация работы полушарий, повышени обучаемости</p>
+            </div>
+        </div>
+        
+        <div class="photo-container-r" data-aos="fade-left-custom" data-aos-delay="500">
+        </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-sec">
+    <div class="main-container-pricing">
+      <h2 class="text-center display-5 mb-5 fade-in">Стоимость занятий</h2>
+      
+      <div class="pricing-card-container" style="animation-delay: 0.2s;">
+          <div class="pricing-card test-card" data-aos="fade" data-aos-delay="500">
+              <p >Пробное занятие</p>
+              <p >1 250 руб.</p>
+          </div>
+        
+          <div class="pricing-card new-card" data-aos="fade" data-aos-delay="1000">
+              <p >Новичок</p>
+              <p >1 250 руб.</p>
+          </div>
+        
+          <div class="pricing-card nineex-card" data-aos="fade" data-aos-delay="1500">
+              <p >8 занятий</p>
+              <p >8 000 руб.</p>
+          </div>
+      </div>
+      <div class="text-center fade-in" style="animation-delay: 0.4s; padding: 72px;">
+        <button class="btn-more btn-link">Все варианты</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-sec">
+    <div class="main-container-gal">
+          <div class="container-chom">
+            <p class="lead" data-aos="fade" data-aos-delay="1000">Развитие — это данная от природы возможность вырабатывания усилия, благодаря которому человек может познать свою природу</p>
+          </div>
+          
+          <div class="container-chom-bot" data-aos="fade" data-aos-delay="2500">
+            <h2 class="display-4 mb-4 chom-header">чом</h2>
+            <div class="border-chom">
+                <p>Основатель</p>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <div class="container-reviews">
+      <h2 class="text-center display-5 mb-5 fade-in">Отзывы</h2>
+      
+      <div class="reviews-cards-cont" style="animation-delay: 0.2s;">
+
+        
+        <div class="reviews-card-body">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <h6 class="reviews-text user">Пользователь</h6>
+            <p class="reviews-text">Даосские практикики - это инструмент на пути развития. За многолетнее соприкосновения с ними произошли сущенственные измененияна физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развития жестнственности, наблюдения и внимания, изменилось отношение к себе и пространству, обретение смысла жизни, она стала более насыщенной и интресной. Участие в даосских программах дает углубление в ранее приобретенных качествах и развитие новых, возможность улучшать себя и свою жизнь.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+        
+        <div class="reviews-card-body">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">От тела к духу - так бы я обозначила свой практический путь. Начав работу с телом, улучшила здоворье, внешний вид. Продолжая заниматься, выравнивала эмоциональныйй фон. Подключилось сосредоточение, что привело к фокусировке. И только тогда в практике появилась глубина, а понятие жизни и смерти. Изменилось отношение к себе, к своему пространству. Появились неизведанные до этого переживания, как награда за усилие. Ответственность за мысли и поступки стала нормой существования. Мой мир стал лучше, расширилось пространство вариантов.  Благодаря развитию внутренней силы, обрела опору внутри себя.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+        
+        <div class="reviews-card-body">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">От тела к духу - так бы я обозначила свой практический путь. Начав работу с телом, улучшила здоворье, внешний вид. Продолжая заниматься, выравнивала эмоциональныйй фон. Подключилось сосредоточение, что привело к фокусировке. И только тогда в практике появилась глубина, а понятие жизни и смерти. Изменилось отношение к себе, к своему пространству. Появились неизведанные до этого переживания, как награда за усилие. Ответственность за мысли и поступки стала нормой существования. Мой мир стал лучше, расширилось пространство вариантов.  Благодаря развитию внутренней силы, обрела опору внутри себя.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">Даосские практикики первоначально позволяли мне решать локальные задачи с телом, сознанием и этого мне было достаточно. В процессе изучения практика стала для меня набором инструментов позволяющая отремонтировать не только тело, но и многочисленные моменты жизни. Сейчас даосские практики стали восприниматься как наука о жизненности, наука о взаимодействии человека с пространством.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">Второй год занимаюсь даосскими практиками и все больше погружаюсь и пытаюсь осознать их глубину! Практики помогли мне узнать мое тело изнутри и убрать болезни которые накопила в течении жизни! Принесли много радости и света наполненности и осознанности! Хотелось бы и дальше познавать этот путь!</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">Начала 25 лет назад с Цигун Железная рубашка, далее Тайцзицюань, видела воочию Чэнь Сяована, далее огромный перерыв и возврат к практикам у Олега Михайловича. Продолжаю развиваться. И считаю, что даосские практики - база, без которой невозможно двигаться по пути трансформации тела и развития мозга. Любые сложные моменты в жизни - практикуй. Выравнивай себя. Все решаемо. Это мое отношение к даосским практикам. Они выравнивают меня, дают баланс. </p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">Я начала заниматься доасскими практиками за год до беременности. Но даже этого хватило, чтобы подготовить организм к такому событию, и он заметил нагрузки только, когда живот стал очень тяжелым. У меня не было ни токсикоза,  ни желания поспать ( которое часто бывает у беременных на первых неделях), ни странных вкусовых желаний. До самых родов я была активная и работоспособна.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text">Благодаря даосским практикам, я стала лучше чувствовать свое тело, оно стало более послушным, цельным. Более тонко чувствую окружающий мир, вкусы, запахи. Стала более собранной и внимательной, чем была когда только начинала заниматься. Стала быстрее запоминать движения. Стала более осознанной, почти не стало вопросов типа “А куда я положила ключи?”</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+        
+        <div class="reviews-card-body mobile-hidd">
+            <div class="stars"><img src="./src/images/5stars.png" alt="Описание картинки"></div>
+            <p class="reviews-text user">Пользователь</p>
+            <p class="reviews-text"> По существу даосская алхимия помогла мне прожить и пережить непростые события моей жизни. Учит быть верной себе и пространству.  Несколько лет тому назад мною были написаны строки, которые для меня одна из моих путиводных нитей.
+                <br><br>Вглядеться - понять<br>В чем Тайна вдохновенья<br>И Божьего благословенья,<br>И где заветной двери ключ,<br>Чтоб приоткрыв ту дверь,<br> Увидеть как искриться и играет<br>Тайны луч!<br>Внять оку Разума<br>Кристальной чистоты,<br> Чтоб путь продолжить<br>В Тайну глубины.</p>
+            <small class="reviews-text rdate">25.06.25</small>
+        </div>
+      </div>
+      
+      
+      <div class="text-center fade-in" style="animation-delay: 0.4s; padding: 72px;">
+        <button class="btn-more btn-link">Все отзывы</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="photo-section">
+    <div class="gallery-cont">
+        <div class="swiper mySwiperPhoto" style="padding: 10px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swip-photo-conteiner">
+                        <div class="swip-photo-conteiner">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="swip-photo-conteiner">
+                        <div class="swip-photo-conteiner">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="swip-photo-conteiner">
+                        <div class="swip-photo-conteiner">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-slide">
+                    <div class="swip-photo-conteiner">
+                        <div class="swip-photo-conteiner">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="swip-photo-conteiner">
+                        <div class="swip-photo-conteiner">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+  </section>
+
+    <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="text-center display-5 mb-5 fade-in">Вопросы и ответы</h2>
+      
+      <div class="accordion fade-in" id="faqAccordion" style="animation-delay: 0.2s;">
+        <div class="accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Как подготовиться к занятиям?
+            </button>
+        </p>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p class="accord-text">jkngks ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОп исаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОпис аниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписа ниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Форма и обувь для занятий
+            </button>
+        </p>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p class="accord-text">jkngks dfkgkdsf </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item accordion-last">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Противопоказания
+            </button>
+            </p>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p class="accord-text">jkngks dfkgkdsf </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <p class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              На какое занятие лучше прийти при нулевом уровне подготовики? 
+            </button>
+          </p>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <p class="accord-text">jkngks dfkgkdsf </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="text-center mt-5 fade-in" style="animation-delay: 0.4s; display: flex; justify-content: center;">
+        <button class="practiceBtn telegramm">
+          <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1165_5488)">
+            <path d="M31.4567 5.10209C31.9792 4.89886 32.5712 5.0038 32.9918 5.37455C33.4123 5.74522 33.5905 6.319 33.4547 6.86283L27.4547 30.8628C27.3236 31.3871 26.9208 31.8011 26.4 31.9453C25.8794 32.0894 25.3216 31.9421 24.9396 31.5601L18.6613 25.2818L15.1998 29.899C14.8651 30.3453 14.3106 30.5698 13.7599 30.4805C13.2093 30.3912 12.7543 30.0032 12.5778 29.4742L9.77405 21.063L4.32923 18.3413C3.79877 18.0761 3.47437 17.5231 3.50159 16.9307C3.5291 16.338 3.90371 15.8171 4.45667 15.6021L31.4567 5.10209ZM8.69592 17.1695L11.671 18.6578L11.7999 18.731C12.0918 18.915 12.3123 19.1948 12.4225 19.5249L14.5172 25.8091L16.5197 23.1402L15.9396 22.5601C15.3538 21.9743 15.3538 21.0248 15.9396 20.439L21.9396 14.439C22.5254 13.8532 23.4749 13.8532 24.0607 14.439C24.6465 15.0248 24.6465 15.9743 24.0607 16.5601L19.1212 21.4995L25.1871 27.5655L29.8424 8.9473L8.69592 17.1695Z" fill="currentColor"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1165_5488">
+            <rect width="36" height="36" fill="white" transform="translate(0.5 0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          Мы в телеграмм
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="links-sect mobile-hidd" style="padding: 30px;">
+    <div class="row g-3 fade-in">
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/parfumer.svg" alt="Gallery 1" class="img-fluid rounded">
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/nutriq.svg" alt="Gallery 2" class="img-fluid rounded">
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/perfect_one.svg" alt="Gallery 3" class="img-fluid rounded">
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/perfect_one_m.svg" alt="Gallery 4" class="img-fluid rounded">
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/tch.svg" alt="Gallery 5" class="img-fluid rounded">
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <img src="./src/icons/inbi_link.svg" alt="Gallery 6" class="img-fluid rounded">
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="contact" class="registration-sector ">
+    <div class="registration-container">
+        <div class="registration-card-body">
+          <p class="registration-card-head">Зарегестрируйтесь на пробное занятие</p>
+          
+          <form class="input-block" style="animation-delay: 0.2s;">
+            
+            <label for="fullName" class="input-header">Ваше полное имя</label>
+            <input type="text" class="input-container" id="fullName" placeholder="Напишите">
+          
+            <label for="email" class="input-header">Ваш Email</label>
+            <input type="email" class="input-container" id="email" placeholder="Напишите">
+          
+            <label for="phone" class="input-header">Ваш телефон</label>
+            <input type="tel" class="input-container" id="phone" placeholder="Напишите">
+            
+
+            <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch mt-5">
+              <button class="btn more reg">Зарегестрироваться</button>
+            </div>
+            
+          </form>
+        </div>
+        
+        <div class="registration-photo mobile-hidd" style="animation-delay: 0.4s;">
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Font Awesome -->
+  <!-- <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script> -->
+  <!-- slick-carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- Animation  -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+</body>
+</html>

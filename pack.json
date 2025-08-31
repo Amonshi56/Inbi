@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "name": "bootstrap-jquery-project",
+    "description": "A Bootstrap jQuery project converted from React",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build"
+    },
+    "dependencies": {
+      "bootstrap": "^5.3.2",
+      "jquery": "^3.7.1"
+    },
+    "devDependencies": {
+      "vite": "^5.0.0"
+    }
+  }
+  

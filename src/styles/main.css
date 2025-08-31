@@ -1,0 +1,1737 @@
+@import url('https://fonts.googleapis.com/css2?family=Ledger&display=swap');
+
+@font-face {
+  font-family: "AA Stetica";
+  src: url("../fonts/AA_Stetica_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AA Stetica";
+  src: url("../fonts/AA_Stetica_Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AA Stetica";
+  src: url("../fonts/AA_Stetica_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Custom CSS Variables */
+:root {
+    --primary-green: #727967;
+    --light-green: #b8bfad;
+    --brown: #89503c;
+    --light-brown: #c58c78;
+    --dark-bg: #1a1715;
+    --text-muted: #565351;
+    --Global-Black: #000;
+    --Global-Brown-Brown-70: #89503C;
+    --Global-white: #FFF;
+    --Text-Accent: #702C29;
+    --Global-Green-Green-30: #E0E7D5;
+    --Global-Gray-Gray-20: #ECE9E7;
+    --Text-Secondary: #565351;
+    --Botton-Active-Enabled: #727967;
+    --Global-Brown-Brown-50 : #C58C78;
+    --Botton-Active-Enabled: #727967;
+    --Global-Gray-Gray-30: #CECBC9;
+    --Global-Green-Green-60: #727967;
+    --Global-Green-Green-80: #363D2B;
+    --Global-Gray-Gray-10: #F5F5F5;
+    --Global-Green-Green-40: #B8BFAD;
+    --Global-Gray-Gray-90: #1A1715;
+    --Global-Gray-Gray-50: #928F8D;
+  }
+  
+  .mt-72 {
+    margin-top: 72px;
+  }
+
+  .mb-72 {
+    margin-bottom: 72px;
+  }
+
+  .desktop-hidd {
+    display: none !important;
+  }
+
+  p {
+    margin: 0px;
+  }
+  /* Custom Fonts */
+  body {
+    font-family: "AA Stetica", sans-serif;
+  }
+  
+  .display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ledger', serif;
+  }
+  
+  /* Custom Button Styles */
+  .btn-success {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .btn-success:hover {
+    background-color: #5a6152;
+    border-color: #5a6152;
+  }
+  
+  .btn-outline-success {
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .btn-outline-success:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+  }
+  
+  .text-success {
+    color: var(--primary-green) !important;
+  }
+  
+  .border-success {
+    border-color: var(--primary-green) !important;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    height: 973px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 72px;
+    gap: 10px;
+    background: var(--Global-Brown-Brown-70, #89503C);
+    display: flex;
+  }
+
+  .hero-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+  
+  h1.display-5 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: normal;
+    color: var(--Global-white, #FFF);
+  }
+
+  /* Statistics Section  */
+   .py-custom {
+    padding-top: 120px;
+    padding-bottom: 27px;
+    margin-top: 72px;
+    margin-bottom: 72px;  
+   }
+
+  .card {
+    /* height: 332px;
+    width: 358px; */
+    padding: 32px 28px;
+    display: flex;
+    padding: 32px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .card-text {
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;  
+  }
+
+  /* Upcoming Events Section */
+
+  #events {
+    height: 875px;
+  }
+
+  .text-data {
+    color: var(--Text-Accent);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .card-title {
+    color: var(--Global-Black);
+    font-family: Ledger;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    align-self: stretch;
+  }
+
+  .pr-card-text {
+    overflow: hidden;
+    color: var(--Global-Black);
+    text-overflow: ellipsis;
+    font-family: "AA Stetica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    height: 65px;
+    align-self: stretch;
+    display: -webkit-box;       
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;       
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+
+  .pr-card {
+    padding: 32px !important;
+    gap: 18px !important;
+    border-radius: 12px;
+  }
+
+  .online {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--Global-Green-Green-30);
+    color: #000;
+    font-family: "AA Stetica";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+  }
+
+  .btninfo {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--Global-Gray-Gray-20);
+    color: #000;
+    font-family: "AA Stetica";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+  }
+
+  .price {
+    color: var(--Text-Secondary);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; 
+    text-transform: uppercase;
+  }
+
+  .sum {
+    line-height: 24px !important;
+    color: #000 !important;
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+ 
+  .more {
+    display: flex;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--Botton-Active-Enabled);
+    background: var(--Botton-Active-Enabled);
+    color: #FFF;
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .more:hover {
+    background: var(--Global-Brown-Brown-50);
+    color: #FFF;
+  }
+
+  #prevBtn, #prevBtn1, #nextBtn, #prevBtnPr, #prevBtnPr1, #nextBtnPr {
+    display: flex;
+    height: 44px;
+    width: 48px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--Botton-Active-Enabled);
+    background-color: #FFF;
+    margin: 11px;
+    background: transparent;
+  }
+
+  #prevBtn:hover svg,
+  #prevBtn1:hover svg,
+  #nextBtn:hover svg,
+  #prevBtnPr:hover svg,
+  #prevBtnPr1:hover svg,
+  #nextBtnPr:hover svg {
+    fill: var(--Global-Brown-Brown-50);
+  }
+
+  #prevBtn:hover,
+  #prevBtn1:hover,
+  #nextBtn:hover,
+  #prevBtnPr:hover,
+  #prevBtnPr1:hover,
+  #nextBtnPr:hover {
+    border: 1px solid var(--Global-Brown-Brown-50);
+  }
+
+  #prevBtn svg,
+  #prevBtn1 svg, 
+  #nextBtn svg,
+  #prevBtnPr svg,
+  #prevBtnPr1 svg,
+  #nextBtnPr svg {
+    fill: var(--Botton-Active-Enabled);
+  }
+
+  .events-mobile-Hprbtn {
+    opacity: 0 !important;
+    display: none !important;
+  }
+
+  .section-swapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .container-swapper {
+    justify-content: center;
+    align-content: center;
+    width: 85%;
+    height: 842px;
+  }
+
+  .div-swapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-more {
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #FFF;
+    gap: 4px;
+    border-bottom: 1px solid var(--Botton-Active-Enabled);
+    color: var(--Botton-Active-Enabled);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .btn-more:hover {
+    color: var(--Global-Brown-Brown-50);
+    border-bottom: 1px solid var(--Global-Brown-Brown-50);
+  }
+
+  /* Method Section */
+  .method-cont {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--padding-padding-11, 18px);
+    align-self: stretch;
+    background-color: #FFF;
+    justify-content: center;
+  }
+  
+
+  .method-img {
+    width: 735px;
+    height: 728px;
+    flex-shrink: 0;
+    aspect-ratio: 105/104;
+  }
+
+  .method-div {
+    width: 50% !important;
+    padding: 30px;  
+  }
+
+  .text-method {
+    color: var(--Global-Black);
+    text-align: center;
+    align-self: stretch;
+    /* Dt/H4 */
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .method-mob-img{
+    display: none !important;
+  }
+
+  .method-desc-img {
+    display: flex !important;
+    justify-content: center;
+  }
+
+
+  /* Practices Section */
+  .pr-card-video-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    flex: 1 0 0;
+  }
+
+  .practice-video-card {
+    display: flex;
+    height: 519px;
+    padding: 60px 10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--Global-Brown-Brown-50);
+    box-shadow: 0 4px 11.8px 0 var(--Global-Gray-Gray-30);
+  }
+
+  .practiceBtn {
+    display: flex;
+    height: 44px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--Botton-Active-Enabled);
+    color: var(--Botton-Active-Enabled);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: transparent !important;
+  }
+  .practiceBtn:hover {
+    border: 1px solid var(--Global-Brown-Brown-50);
+    color: var(--Global-Brown-Brown-50);
+  }
+
+  /* Benefits Section */
+  .benefits-sec {
+    display: flex;
+    align-content: center;
+    height: 982px;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+
+  .main-container-benefits {
+    width: 95%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .photo-container-left {
+    width: 795px;
+    height: 981px;
+    flex-grow: 0;
+    aspect-ratio: 47/58;
+    border-radius: 0 28px 28px 0;
+    background: url(../images/Алх.jpg) 16.874px -105.942px / 98.482% 119.839% no-repeat;
+    transform: translateX(-100px);  
+  }
+
+  .container-info {
+    display: flex;
+    padding: 32px 0;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: var(--padding-padding-7, 44px);
+    align-items: center;
+  }
+
+  .sub-container-info {
+    display: flex;
+    width: 100%;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--padding-padding-6, 32px);
+  }
+
+  .info-block {
+    display: flex;
+    height: 196.667px;
+    padding: 56px 36px;
+    align-items: center;
+    gap: 36px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 4px solid var(--Global-Green-Green-60);
+    color: var(--Global-Green-Green-60, #727967);
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    justify-content: center;
+  }
+
+  .info-block-noBr {
+    display: flex;
+    padding: 56px 28px;
+    align-items: center;
+    gap: var(--padding-padding-11, 18px);
+    align-self: stretch;
+    border-radius: 12px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .info-block-noBr-sub {
+    color: var(--Global-Green-Green-80);
+    text-align: center;
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    gap: 11px;
+  }
+
+  .info-block-noBr-sub-m {
+    display: none;
+  }
+
+  .btnwrt {
+    display: flex;
+    height: 56px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex: 1 0 0;
+    border-radius: 4px;
+    border: 1px solid var(--Botton-Active-Enabled);
+    background: var(--Botton-Active-Enabled);
+    color: #FFF;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .btnwrt:hover {
+    border: 1px solid var(--Global-Brown-Brown-50);
+    background: var(--Global-Brown-Brown-50);
+  }
+
+  /* Features Section */
+  .main-container {
+    width: 85%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .features-sec {
+    display: flex;
+    align-content: center;
+    height: 982px;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+
+  .photo-container-r {
+    width: 731px;
+    height: 907px;
+    aspect-ratio: 54/67;
+    border-radius: 28px 0 0 28px;
+    background: url(../images/ИндАлх.png) no-repeat;
+    transform: translateX(150px);
+    flex-grow: 0;
+  }
+
+  .container-info-features {
+    width: 861px;
+    padding: 73px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    grid-template-rows: repeat(2, auto);   /* 2 строки */
+    gap: 10px;
+    flex-grow: 1;
+  }
+
+  .features-card {
+    display: flex;
+    gap: 40px;
+    flex: 1 0 0;
+    align-self: stretch;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: "AA Stetica";
+    text-align: center;
+  }
+
+  .features-header {
+    color: var(--Global-Black);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .text-features {
+    color: var(--Text-Secondary);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+
+  /* Pricing Section */
+
+  .pricing-sec {
+    display: flex;
+    height: 985px;
+    padding: 72px 0;
+    justify-content: center;
+    gap: 72px;
+    align-self: stretch;
+  }
+
+  .main-container-pricing {
+    width: 85%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-card-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 18px;
+    align-self: stretch;
+  }
+
+  .pricing-card {
+    width: 508px;
+    height: 543px;
+    aspect-ratio: 29/31;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 70px;
+    gap: 10px;
+  }
+
+  .test-card {
+    background: url(../images/test.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+    justify-content: end;
+  }
+
+  .new-card {
+    background: url(../images/new.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+    justify-content: start;
+  }
+
+  .nineex-card {
+    background: url(../images/8ex.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+    justify-content: end;
+  }
+
+  /* Gallery Section */
+  .gallery-sec {
+    display: flex;
+    height: 1051px;
+    justify-content: flex-end;
+    background: url(../images/chom.png) lightgray 50% / cover no-repeat;
+  }
+
+  .main-container-gal {
+    width: 45%;
+    margin: 72px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+  }
+
+  .container-chom {
+    display: flex;
+    height: 578px;
+    align-items: center;
+    gap: 18px;
+    color: var(--Global-white);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  .container-chom-bot {
+    color: var(--Global-white);
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .border-chom {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    padding: 10px;
+  }
+
+  .chom-header {
+    padding-left: 10px;
+  }
+
+  /* Reviews Section */
+
+  .reviews-section {
+    display: flex;
+    padding-top: 72px;
+    align-items: flex-start;
+    gap: 72px;
+    align-self: stretch;
+    justify-content: center;
+    margin: 72px;
+  }
+
+  .container-reviews {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 85%;
+  }
+  
+  .reviews-cards-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+  }
+
+  .reviews-card-body {
+    display: flex;
+    padding: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20.9px 0 var(--Global-Gray-Gray-30);
+  }
+
+  .reviews-text {
+    color: var(--Text-primary);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+  }
+
+  .user {
+    color: var(--Text-Secondary);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .rdate {
+    overflow: hidden;
+    color: var(--Text-Secondary);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  /* Photo section */
+
+  .swip-photo-conteiner {
+    display: flex;
+    height: 295px;
+    border-radius: 18px;
+    background: var(--Global-Brown-Brown-50);
+  }
+
+  .photo-section {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .gallery-cont {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  /* FAQ section */
+
+  .faq-section {
+    display: flex;
+    padding: 72px 0;
+    align-self: stretch;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .faq-container {
+    padding: 72px 0;
+    width: 85%;
+    gap: 72px;
+  }
+
+  .telegramm {
+    font-weight: 500 !important;
+  }
+  
+  /* Registration Form  */
+
+  .registration-sector {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    background: var(--Global-Gray-Gray-90);
+    padding-bottom: 72px;
+  }
+
+  .registration-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 72px;
+  }
+
+  .registration-photo {
+    background: url(../images/Алхим.png) no-repeat;
+    border-radius: 0%;
+    width: 611px;
+    height: 910px;
+  }
+
+  .registration-card-body {
+    background: #FFF;
+    margin: 72px;
+    display: flex;
+    width: 961px;
+    height: 685px;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 19px;
+  }
+
+  .registration-card-head {
+    color: #000;
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 44px;
+  }
+
+  .input-block {
+    display: flex;
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .input-container{
+    display: flex;
+    height: 56px;
+    padding: 10px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 6px;
+    border: 1px solid var(--Global-Gray-Gray-50);
+    background: var(--Global-Gray-Gray-10);
+    margin-bottom: 24px;
+  }
+
+  .input-header {
+    color: #000;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .reg {
+    display: flex;
+    height: 56px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--Botton-Active-Enabled, #727967);
+    background: var(--Botton-Active-Enabled, #727967);
+    font-size: 24px;
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: var(--animation-delay, 0s);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Card Hover Effects */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Practice Cards */
+  .practice-card {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .practice-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Custom Shadows */
+  .shadow-sm {
+    box-shadow: 0 2px 10px rgba(206, 203, 201, 0.3) !important;
+  }
+  
+  /* Accordion Customization */
+
+  .accordion-button {
+    background-color: transparent;
+    border: 1px solid var(--Global-Green-Green-40);
+    color: var(--Text-primary);
+    font-family: Ledger;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 36px;
+    max-width: 100%; 
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: #333;
+    background-color:#FFF;
+  }
+  
+  .accordion-item {
+    border: 1px solid var(--Global-Green-Green-40);
+    margin: -1px;
+  }
+
+  .accordion-item:last-child {
+    border-radius: 0 0 6px 6px; 
+  }
+
+  .accordion-button::after {
+    background-image: url("../icons/plus.svg");
+    background-size: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid var(--Global-Green-Green-40);
+    border-bottom: 0px !important;
+    border-right: 0px;
+    border-left: 0px;
+  }
+
+  
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("../icons/minus.svg");
+    width: 36px;
+    height: 36px;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .accord-text{
+    max-width: 100%; 
+    word-wrap: break-word; /* переносит длинные слова */
+    word-break: break-word;
+  }
+
+  .nextBtnP, .prevBtnP {
+    background-image: none;
+    width: auto;
+  }
+
+  .accordion-collapse {
+    display: flex;
+    padding: 0 36px 36px 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    max-width: 100%; 
+    color: #000;
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    overflow-wrap: break-word;
+  }
+
+  .accordion-content {
+    max-width: 100%;       /* не больше контейнера */
+    overflow-wrap: break-word;
+  }
+
+  /* Form Styles */
+  .form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(114, 121, 103, 0.25);
+  }
+
+
+
+
+  @media (min-width: 102px) {
+    html, body {
+      overflow-x: hidden;
+    }
+
+    .photo-container-left.aos-animate {
+      transform: translateX(-100px);  
+    }
+
+      /* custom animation  */
+    [data-aos="fade-right-custom"] {
+      opacity: 0;
+      transform: translateX(-1000px); 
+      transition: opacity 2.6s ease, transform 2.6s ease;
+    }
+
+
+    [data-aos="fade-right-custom"].aos-animate {
+      opacity: 1;
+      transform: translateX(-100px) !important; 
+    }
+
+    [data-aos="fade-left-custom"] {
+      opacity: 0;
+      transform: translateX(1000px); 
+      transition: opacity 2.6s ease, transform 2.6s ease;
+    }
+
+    [data-aos="fade-left-custom"].aos-animate {
+      opacity: 1;
+      transform: translateX(150px) !important; 
+    }
+    
+  }
+
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .hero-section {
+      background-attachment: scroll;
+    }
+
+    .desktop-hidd {
+      display: flex !important;
+    }
+
+    .body {
+      display: flex;
+      width: var(--Lauout-frame-Mobile-W, 412px);
+      min-width: var(--Lauout-frame-Mobile-W-min, 375px);
+      max-width: var(--Lauout-frame-Mobile-W-max, 940px);
+      padding: 0 var(--Lauout-frame-Tablet-Padding, 40px);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--padding-padding-9, 72px);
+    }
+
+
+    /* hero section */
+    .hero-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 20px;
+    }
+
+    .hero-mobile-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .hero-mobile-sbtn {
+      margin-right: 1rem !important;
+    }
+
+    .hero-header-mobile {
+      font-size: 28px !important;
+      text-align: start !important;
+    }
+    
+    /* Statistics Section */
+
+    .stat-mobile-sec {
+      margin-top: 0px;
+    }
+
+    .stat-mobile-cards {
+      gap:11px;
+    }
+
+    /* events */
+
+    .events-mobile-Hprbtn {
+      opacity: 1 !important;
+      display: flex !important;
+    }
+
+    .mySwiper {
+      width: 100%;
+    }
+
+    .event-mobile-div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #events {
+      margin-top: 144px;
+      margin-bottom: 72px;
+    }
+
+    .event-hed-mobile {
+      margin-bottom: 10px !important;
+    }
+
+    .event-mbtns {
+      display: flex;
+      width: 100%;
+    }
+
+    #prevBtn1, #nextBtn {
+      width: 45%;
+    }
+    .pr-btn-hmoobile {
+      opacity: 0;
+    }
+
+    /* method  */
+    .method-mob-img{
+      display: flex !important;
+      margin: 0px !important;
+      justify-content: center;
+    }
+
+    .method-desc-img {
+      display: none !important;
+    }
+  
+    .method-img{
+      height: 320px;
+      width: 323px;
+    }
+
+    .text-method {
+      margin-bottom: 20px !important;
+    }
+    
+    .method-cont{
+      height: 600px;
+      justify-content: center;
+    }
+
+    .method-cont-sub {
+      padding-left: 0%;
+    }
+
+    .method-div {
+      width: 100% !important;
+      padding: 0px;
+    }
+
+    /* practice */
+    .section-swapper {
+      margin-top: 72px;
+    }
+
+    .mySwiperPr {
+      width: 100%;
+    }
+
+    #prevBtnPr1, #nextBtnPr {
+      width: 45%;
+    }
+
+    /* benefits */
+
+    .photo-container-left {
+      display: none !important;
+    }
+
+    .container-info {
+      width: 85%;
+    }
+
+    .sub-container-info {
+      width: 100%;
+    }
+
+    .info-block-noBr {
+      padding: 0px;
+    }
+
+    .info-block-noBr-sub {
+      flex-direction: column;
+    }
+
+    .info-block-noBr-sub-m {
+      display: none;
+    }
+
+    .benefits-sec {
+      margin-bottom: 0px;
+    }
+    /* features */
+    .photo-container-r {
+      display: none;
+    }
+
+    .container-info-features {
+      flex-direction: column;
+      display: flex;
+      gap: 38px;
+    }
+
+    .features-card {
+      gap: 20px;
+    }
+
+    /* pricing */
+
+    .pricing-card-container {
+      flex-direction: column;
+    }
+    
+    .pricing-sec {
+      height: auto;
+      margin-top: 144px;
+    }
+
+    .pricing-card {
+      width: auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+
+    .test-card {
+      background: url(../images/test_mob.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+      justify-content: end;
+    }
+  
+    .new-card {
+      background: url(../images/new_mob.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+      justify-content: start;
+    }
+  
+    .nineex-card {
+      background: url(../images/8ex_mob.png) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+      justify-content: end;
+    }
+
+    /* gallery */
+
+    .gallery-sec {
+      overflow: hidden;
+      background-position-x: -480px;
+      height: auto;
+    }
+
+    .main-container-gal {
+      padding: 0px;
+      width: 90%;
+    }
+
+    .container-chom {
+      align-items: flex-start;
+    }
+
+    /* reviews */
+    .mobile-hidd {
+      display: none;
+    }
+
+    .reviews-cards-cont {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reviews-section{
+      margin: 72px 0px;
+      margin-bottom: 0px;
+    }
+
+    /* faq  */
+    .accordion {
+      padding: 0%;
+    }
+
+    /* registration  */
+    .registration-sector {
+      justify-content: center;
+      align-content: center;
+    }
+
+    .registration-container {
+      padding: 20px;
+      width: auto;
+    }
+
+    .registration-card-body {
+      height: auto;
+      width: auto;
+      flex-shrink: 1;
+      margin: 0%;
+    }
+
+
+    .display-5 {
+      font-size: 2rem;
+    }
+    
+    .display-6 {
+      font-size: 1.5rem;
+    }
+    
+    .practice-card {
+      height: 200px !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+      background-attachment: scroll;
+    }
+
+    /* hero section */
+
+    .hero-mobile-btns {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-mobile-sbtn {
+      width: 45%;
+    }
+
+    .hero-mobile-btn {
+      width: 45%;
+    }
+
+    .hero-header-mobile {
+      font-size: 28px !important;
+    }
+    
+    /* Statistics Section */
+
+    .stat-mobile-sec {
+      margin-top: 0px;
+    }
+
+    .stat-mobile-cards {
+      gap:11px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);   
+    }
+      
+    .stat-mobile-cards-cont {
+      width: 100%;
+    }
+
+    /* method  */
+    .method-mob-img{
+      display: flex !important;
+      margin: 0px !important;
+      justify-content: center;
+    }
+
+    .method-desc-img {
+      display: none !important;
+    }
+    
+  
+    .method-img{
+      height: 320px;
+      width: 323px;
+    }
+    
+    .method-cont {
+      margin: -72px;
+    }
+
+    .method-cont-sub {
+      padding-left: 0%;
+    }
+
+    .text-method {
+      margin-bottom: 20px !important;
+    }
+    
+    .method-cont{
+      height: 600px;
+    }
+
+    .method-div {
+      padding: 0px;
+      width: 95%;
+    }
+
+    /* practice */
+    .section-swapper {
+      margin: 72px 0px;
+      height: 100%;
+    }
+
+    .practice-video-card {
+      height: 451px;
+    }
+
+    /* benefits */
+    .photo-container-left {
+      width: 540px;
+      height: 666px;
+      aspect-ratio: 30/37;
+      transform: translateX(-70px);
+    }
+
+    .container-info{
+      width: 50%;
+      padding: 0px;
+    }
+
+    .sub-container-info {
+      width: 100%;
+      padding-left: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .info-block-noBr-sub-m {
+      width: 85%;
+      margin: auto;
+      margin-top: 72px;
+      display: flex;
+      color: var(--Global-Green-Green-80);
+      text-align: center;
+      font-family: Ledger;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      justify-content: center;
+      align-content: center;
+      display: flex;
+      gap: 11px;
+    }
+
+    .info-block-noBr {
+      display: none;
+    }
+
+    .benefits-sec{
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+
+    /* features */
+
+    .photo-container-r {
+      display: none;
+    }
+
+    .features-card {
+      justify-content: flex-start;
+    }
+    
+    .features-sec {
+      height: auto;
+    } 
+
+    .container-info-features {
+      gap: 32px;
+      padding: 0px;
+    }
+
+    .features-card {
+      gap: 20px;
+    }
+
+    /* pricing  */
+    .main-container-pricing {
+      width: 100%;
+    }
+
+    .pricing-card-container {
+      padding: 72px;
+    }
+
+    .pricing-card {
+      width: auto !important;
+      height: 519px !important;
+      aspect-ratio: auto;
+      flex: 1;
+      padding: 50px;
+      border-radius: 16px;
+      overflow: hidden;
+      font-size: 32px;
+    }
+
+    /* galery  */
+
+    .main-container-gal {
+      padding: 0%;
+    }
+
+    /* reviews */
+
+    .mobile-hidd {
+      display: none;
+    }
+
+    .reviews-section {
+      margin-bottom: 0px;
+    }
+
+    .reviews-cards-cont {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* registration  */
+    .registration-sector {
+      justify-content: center;
+      align-content: center;
+    }
+
+    .registration-container {
+      padding: 0%;
+      width: auto;
+    }
+
+    .display-5 {
+      font-size: 2rem;
+    }
+    
+    .display-6 {
+      font-size: 1.5rem;
+    }
+    
+    .practice-card {
+      height: 200px !important;
+    }
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Loading Animation */
+  .loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .loaded {
+    opacity: 1;
+  }
+  
+  /* Custom Badge Colors */
+  .badge.bg-success {
+    background-color: var(--light-green) !important;
+    color: #333 !important;
+  }
+  
+  .badge.bg-secondary {
+    background-color: #ece9e7 !important;
+    color: #333 !important;
+  }
+  
+  /* Star Rating */
+  .text-warning {
+    color: #ffc107 !important;
+  }
+  
+  /* Photo Gallery Hover Effect */
+  .img-fluid {
+    transition: transform 0.3s ease;
+  }
+  
+  .img-fluid:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Pricing Cards Background Override */
+  .pricing-card-1 {
+    background-color: var(--light-green) !important;
+  }
+  
+  .pricing-card-2 {
+    background-color: #909785 !important;
+  }
+  
+  .pricing-card-3 {
+    background-color: var(--primary-green) !important;
+  }
+  
+  /* Gallery Section Background */
+  .gallery-section {
+    background-color: var(--brown) !important;
+  }
+  
+  /* Custom Border Styles */
+  .border-bottom {
+    border-bottom-width: 2px !important;
+  }
+  
+  /* Button Link Styles */
+  .btn-link {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .btn-link:hover {
+    text-decoration: none;
+  }
+  
+  /* Carousel Button Styles */
+  .carousel-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background-color: var(--primary-green);
+    color: white;
+  }
+  
+
+
