@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/prices.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <!-- Swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+<img src="./src/images/price_top.png" alt="фон" class="bg-img mobile-hidd">
+  <section class="section_standart" style="margin-top: 200px;">
+    
+    <div class="price_container">
+        <div class="price-head-div">
+            <p class="price-header">Цены</p>
+            <div class="price-discount-div" style="display: flex;">
+                <div class="price-first-card">
+                    <p class="price-discount-head">Первое посещение</p>
+                    <p class="price-discount-p">600 руб.</p>
+                </div>
+                <div class="price-discount-card">
+                    <p class="price-discount-head">Скидки</p>
+                    <div class="price-discount-card-div">
+                        <div class="discount-side">
+                          <div class="price-discount-card-header">
+                            <p class="price-discount-p">По карте москвича</p>
+                            <p class="price-discount-p" style="border-left: none;">5%</p>
+                          </div>  
+                          <p class="price-discount-small">Скидка от соответвующего тарифа.</p>  
+                        </div>
+                        <div class="discount-side">
+                            <div class="price-discount-card-header">
+                              <p class="price-discount-p">Молодежная</p>
+                              <p class="price-discount-p" style="border-left: none;">12%</p>
+                            </div>  
+                            <p class="price-discount-small">Скидка  от соответствующего тарифа. Скидка действительна с 16 до 25 лет<br>
+                                Для получения тарифа необходимо предъявить паспорт<br>
+                                Не суммируется со скидкой по социальной карте</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="price-bott-div">
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">Пробное посещение</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Первое занятие</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >600 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Три занятия</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">2 400 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">Разовое посещение</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >1 250 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">1 100 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">4 занятия</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >4 300 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">4 000 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">8 занятий</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >8 000 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">7 500 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">16 занятий</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >13 800 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">12 800 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">24 занятия</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >19 300 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black;border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">18 000 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: white; width: 100%;">
+                <p class="price-discount-head" style="color: black;">Безлимитное посещение</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black; border-color: #727967;">Общая</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;" >150 000 руб.</p>
+                        </div>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" style="color: black; border-color: #727967">Для членов клуба ИНБИ / для детей</p>
+                            <p class="price-discount-p" style="border-left: none; color: black;">130 000 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link" style="display: flex; align-self: end;">Показать детали</button>
+            </div>
+
+            <div class="price-discount-card" style="background-color: #909785; width: 100%;">
+                <p class="price-discount-head" >Алхимик 2</p>
+                <div class="price-discount-card-div">
+                    <div class="discount-side" style="gap: 10px;">
+                        <p class="price-discount-small warn" style="align-self: flex-end; border: none; text-transform: none;" >Занятия по допуску!</p>
+                        <div class="price-discount-card-header">
+                            <p class="price-discount-p" >Для членов клуба ИНБИ</p>
+                            <p class="price-discount-p" style="border-left: none; ">4 300 руб.</p>
+                        </div>    
+                    </div>
+                </div>
+                <button class="btn-more btn-link alch-btn" >Показать детали</button>
+            </div>
+        </div>
+        <button class="practiceBtn telegramm">
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1165_5488)">
+              <path d="M31.4567 5.10209C31.9792 4.89886 32.5712 5.0038 32.9918 5.37455C33.4123 5.74522 33.5905 6.319 33.4547 6.86283L27.4547 30.8628C27.3236 31.3871 26.9208 31.8011 26.4 31.9453C25.8794 32.0894 25.3216 31.9421 24.9396 31.5601L18.6613 25.2818L15.1998 29.899C14.8651 30.3453 14.3106 30.5698 13.7599 30.4805C13.2093 30.3912 12.7543 30.0032 12.5778 29.4742L9.77405 21.063L4.32923 18.3413C3.79877 18.0761 3.47437 17.5231 3.50159 16.9307C3.5291 16.338 3.90371 15.8171 4.45667 15.6021L31.4567 5.10209ZM8.69592 17.1695L11.671 18.6578L11.7999 18.731C12.0918 18.915 12.3123 19.1948 12.4225 19.5249L14.5172 25.8091L16.5197 23.1402L15.9396 22.5601C15.3538 21.9743 15.3538 21.0248 15.9396 20.439L21.9396 14.439C22.5254 13.8532 23.4749 13.8532 24.0607 14.439C24.6465 15.0248 24.6465 15.9743 24.0607 16.5601L19.1212 21.4995L25.1871 27.5655L29.8424 8.9473L8.69592 17.1695Z" fill="currentColor"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1165_5488">
+              <rect width="36" height="36" fill="white" transform="translate(0.5 0.5)"/>
+              </clipPath>
+              </defs>
+            </svg>
+            Мы в телеграмм
+          </button>
+    </div>
+
+  </section>    
+<img src="./src/images/price_mid.png" alt="фон" class="bg-img-bot mobile-hidd">
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- swiper   -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+</body>
+</html>

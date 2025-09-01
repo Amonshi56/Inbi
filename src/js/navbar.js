@@ -17,7 +17,7 @@ class InbiNavbar extends HTMLElement {
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3" style="height: 128px;padding: 12px 120px;">
                 <div class="container-fluid" style="height: 56px;display: flex;justify-content: space-between;align-items: flex-start;align-content: flex-start;row-gap: 16px;flex: 1 0 0;flex-wrap: wrap;align-items: center;">
                     <div class="col-4">
-                        <a class="navbar-brand" href="#" style="display: flex; height: 56px;padding: 0 0.198px;justify-content: center;align-items: center;">
+                        <a class="navbar-brand" href="./index.html" style="display: flex; height: 56px;padding: 0 0.198px;justify-content: center;align-items: center;">
                         <img src="./src/icons/inbib.svg" alt="ИНБИ" height="56"></a>
                     </div>
                     
@@ -43,18 +43,18 @@ class InbiNavbar extends HTMLElement {
                                         </svg>
                                     </a>
                                     <ul class="dropdown-menu custom-dropdown">
-                                        <li><a class="dropdown-item" href="#club" id="about_us_btn">О клубе ИНБИ</a></li>
+                                        <li><a class="dropdown-item" href="about_us.html" id="about_us_btn">О клубе ИНБИ</a></li>
                                         <li><a class="dropdown-item" href="#masters">Мастера</a></li>
                                         <li><a class="dropdown-item" href="#founder">Основатель</a></li>
-                                        <li><a class="dropdown-item" href="#reviews" id="reviews_btn">Отзывы</a></li>
+                                        <li><a class="dropdown-item" href="./reviews.html" id="reviews_btn">Отзывы</a></li>
                                         <li><a class="dropdown-item" href="#gallery">Фотогалерея</a></li>
-                                        <li><a class="dropdown-item" href="#faq" id="FAQ_btn">FAQ</a></li>
+                                        <li><a class="dropdown-item" href="./FAQ.html" id="FAQ_btn">FAQ</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="#practices">Практики</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#events">События</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#schedule">Расписание</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#pricing">Цены</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./prices.html" id="pricing">Цены</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#rental">Аренда залов</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#cabinet">Личный кабинет</a></li>

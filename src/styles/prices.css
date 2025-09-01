@@ -1,0 +1,208 @@
+.price_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.price-head-div {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.price-discount-div {
+    display: flex;
+    width: 100%;
+    gap: 18px;
+}
+.price-discount-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 24px;
+    width: 80%;
+    border-radius: 19px;
+    background: #C58C78;
+    box-shadow: 0 4px 11.8px 0 #CECBC9;
+}
+
+.discount-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-header {
+    color: #000;
+    font-family: Ledger;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-first-card {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 20%;
+    align-self: stretch;
+    border-radius: 19px;
+    background: #909785;
+    box-shadow: 0 4px 11.8px 0 #CECBC9;
+}
+
+.price-discount-head {
+    color: var(--Global-white, #FFF);
+    font-family: Ledger;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.price-discount-p {
+    color: var(--Global-white, #FFF);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-left: 1px solid  #FFF;
+    padding: 10px;
+}
+
+.price-discount-small {
+    color: var(--Global-white, #FFF);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    border-left: 1px solid  #FFF;
+    padding: 10px;
+}
+
+.price-discount-card-div {
+    display: flex;
+    width: 100%;
+}
+
+.price-discount-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount-side {
+    width: 100%;
+}
+
+.price-bott-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* две равные колонки */
+    gap: 20px;
+}
+
+.alch-btn {
+    display: flex; 
+    align-self: end; 
+    border-color: white; 
+    background-color: #909785; 
+    color: white;
+}
+
+.telegramm {
+    align-self: center;
+     width: 300px;
+     margin-top: 300px;
+     margin-bottom: 300px;
+}
+
+#pricing {
+    color: rgba(114, 121, 103, 1) !important;
+}
+
+.bg-img {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    z-index: -100;
+    opacity: 0.5;
+  }
+
+.bg-img-bot {
+    position: absolute;
+    top: 1500px;
+    right: 0;
+    z-index: -100;
+    opacity: 0.5;
+}  
+
+@media (max-width: 767px) {
+    .price-bott-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-discount-card, .price-first-card {
+        width: 100%;
+    }
+
+    .price-discount-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-discount-card-div {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .price-discount-card-header {
+        flex-direction: column;
+    }
+
+    .telegramm {
+         margin-top: 150px;
+         margin-bottom: 150px;
+    }
+
+    .btn-more {
+        width: 100%;
+    }
+
+    .price-discount-p {
+        border-left: 1px solid !important;
+        padding-left: 10px;
+    }
+
+    .warn {
+        align-self: flex-start !important;
+    }
+}  
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .price-discount-card {
+        width: 100%;
+    }
+
+    .price-first-card {
+        width: 40% !important;
+    }
+
+    .price-bott-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .telegramm {
+        margin-top: 150px;
+        margin-bottom: 150px;
+   }
+
+}

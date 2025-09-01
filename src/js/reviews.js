@@ -238,20 +238,6 @@ document.querySelectorAll('.filter-group').forEach(group => {
         });
       }
 
-      function initLightGallery() {
-        document.querySelectorAll('.review-gallery').forEach(gallery => {
-            // Проверка, чтобы не инициализировать уже инициализированные галереи
-            if (!gallery.classList.contains('lg-initialized')) {
-                lightGallery(gallery, {
-                    selector: 'a',
-                    zoomFromOrigin: false, // отключаем эффект “увеличения из миниатюры”
-                    mode: 'lg-fade',       // плавная смена слайдов без масштабирования
-                    speed: 0               // скорость анимации 0 = мгновенно
-                });
-                gallery.classList.add('lg-initialized');
-            }
-        });
-    }
   
       // Создание чекбоксов для фильтра
       function createCheckboxFilter(container, values, selectedArray, countElement, filterFunction) {
@@ -356,6 +342,7 @@ document.querySelectorAll('.filter-group').forEach(group => {
         photos.forEach((photo, index) => {
           // создаём ссылку
           const link = document.createElement('a');
+          link.setAttribute('data-fancybox', 'gallery');
           link.href = photo; // ссылка на оригинал картинки
           link.setAttribute('data-lg-size', '1600-1067'); // можно задать размер (необязательно)
       
@@ -491,7 +478,6 @@ document.querySelectorAll('.filter-group').forEach(group => {
           
           paginationContainer.style.display = 'flex';
         }
-        initLightGallery();
       }
   
       // Создание кнопок страниц

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео Галерея Swiper с LightGallery</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    
+    <!-- LightGallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px 0;
+        }
+
+        .container-swapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .display-5 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .div-swapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        /* Swiper стили */
+        .mySwiperPr {
+            padding: 20px 60px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            width: auto;
+        }
+
+        /* Карточки видео */
+        .pr-card-video-conteiner {
+            width: 100%;
+            max-width: 280px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .pr-card-video-conteiner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .practice-video-card {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .practice-video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .practice-video-card .video-poster {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .practice-video-card .video-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .practice-video-card .video-status {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .practice-video-card.playing .video-poster {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .practice-video-card .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .practice-video-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 28px;
+            height: 28px;
+            fill: #333;
+            margin-left: 3px;
+        }
+
+        .practiceBtn {
+            width: 100%;
+            padding: 20px;
+            background: white;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .practiceBtn:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+
+        /* Кнопки навигации */
+        .pr-btn-hmoobile, .events-mobile-Hprbtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        #nextBtnPr, #nextBtnPr2 {
+            left: auto;
+            right: 10px;
+        }
+
+        .pr-btn-hmoobile:hover, .events-mobile-Hprbtn:hover, #nextBtnPr:hover, #nextBtnPr2:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .pr-btn-hmoobile svg, .events-mobile-Hprbtn svg, #nextBtnPr svg, #nextBtnPr2 svg {
+            transition: fill 0.3s ease;
+        }
+
+        .pr-btn-hmoobile:hover svg, .events-mobile-Hprbtn:hover svg, #nextBtnPr:hover svg, #nextBtnPr2:hover svg {
+            fill: white;
+        }
+
+        .event-mbtns {
+            display: none;
+        }
+
+        /* Кнопка "Все практики" */
+        .btn-more {
+            padding: 15px 30px;
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-more:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            .mySwiperPr {
+                padding: 20px;
+            }
+
+            .pr-btn-hmoobile, #nextBtnPr {
+                display: none;
+            }
+
+            .event-mbtns {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .events-mobile-Hprbtn, #nextBtnPr2 {
+                position: static;
+                transform: none;
+            }
+
+            .pr-card-video-conteiner {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .practice-video-card {
+                height: 300px;
+            }
+
+            .display-5 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Индикатор загрузки */
+        .loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            z-index: 4;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Кастомизация LightGallery */
+        .lg-backdrop {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        .lg-video-cont {
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        /* Показываем превью видео */
+        .video-loaded .video-poster {
+            opacity: 0.8;
+        }
+
+        .video-loaded:hover .video-poster {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <section id="practices" class="section-swapper">
+        <div class="container-swapper">
+            <h2 class="display-5">Направления занятий</h2>
+            
+            <div class="div-swapper">
+                <button id="prevBtnPr" class="pr-btn-hmoobile">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1165_3505)">
+                            <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1165_3505">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+
+                <!-- Галерея видео -->
+                <div id="video-gallery" class="swiper mySwiperPr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pr-card-video-conteiner" 
+                                 data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                 data-poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+                                 data-sub-html="<h4>Даосская алхимия</h4><p>Древние практики самосовершенствования и энергетической работы</p>">
+                                <div class="practice-video-card">
+                                    <video 
+                                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
+                                        muted 
+                                        preload="metadata"
+                                        playsinline
+                                        loop>
+                                    </video>
+                                    <div class="video-poster">
+                                        <div class="video-title">Даосская алхимия</div>
+                                        <div class="video-status">Загрузка...</div>
+                                    </div>
+                                    <div class="loading-indicator" style="display: none;"></div>
+                                    <div class="play-overlay">
+                                        <svg class="play-icon" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="practiceBtn">Даосская алхимия</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="pr-card-video-conteiner" 
+                                 data-src="https://sample-videos.com/zip/10/mp4/360/SampleVideo_360x640_1mb.mp4"
+                                 data-sub-html="<h4>Искусство развития мозга</h4><p>Техники для улучшения когнитивных функций и концентрации</p>">
+                                <div class="practice-video-card">
+                                    <video 
+                                        src="https://sample-videos.com/zip/10/mp4/360/SampleVideo_360x640_1mb.mp4" 
+                                        muted 
+                                        preload="metadata"
+                                        playsinline
+                                        loop>
+                                    </video>
+                                    <div class="video-poster">
+                                        <div class="video-title">Искусство развития мозга</div>
+                                        <div class="video-status">Загрузка...</div>
+                                    </div>
+                                    <div class="loading-indicator" style="display: none;"></div>
+                                    <div class="play-overlay">
+                                        <svg class="play-icon" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="practiceBtn">Искусство развития мозга</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="pr-card-video-conteiner" 
+                                 data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                                 data-poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+                                 data-sub-html="<h4>Индийская алхимия</h4><p>Традиционные методы трансформации сознания</p>">
+                                <div class="practice-video-card">
+                                    <video 
+                                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" 
+                                        muted 
+                                        preload="metadata"
+                                        playsinline
+                                        loop>
+                                    </video>
+                                    <div class="video-poster">
+                                        <div class="video-title">Индийская алхимия</div>
+                                        <div class="video-status">Загрузка...</div>
+                                    </div>
+                                    <div class="loading-indicator" style="display: none;"></div>
+                                    <div class="play-overlay">
+                                        <svg class="play-icon" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="practiceBtn">Индийская алхимия</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="pr-card-video-conteiner" 
+                                 data-src="./src/video/Гульнара_багуа.mov"
+                                 data-sub-html="<h4>Тайци-цюань</h4><p>Плавные движения для гармонии тела и духа</p>">
+                                <div class="practice-video-card">
+                                    <video 
+                                        src="./src/video/Гульнара_багуа.mov" 
+                                        muted 
+                                        preload="metadata"
+                                        playsinline
+                                        loop>
+                                    </video>
+                                    <div class="video-poster">
+                                        <div class="video-title">Тайци-цюань</div>
+                                        <div class="video-status">Загрузка...</div>
+                                    </div>
+                                    <div class="loading-indicator" style="display: none;"></div>
+                                    <div class="play-overlay">
+                                        <svg class="play-icon" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="practiceBtn">Тайци-цюань</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="pr-card-video-conteiner" 
+                                 data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                                 data-poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
+                                 data-sub-html="<h4>Тайци-цигун</h4><p>Энергетические практики для укрепления здоровья</p>">
+                                <div class="practice-video-card">
+                                    <video 
+                                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" 
+                                        muted 
+                                        preload="metadata"
+                                        playsinline
+                                        loop>
+                                    </video>
+                                    <div class="video-poster">
+                                        <div class="video-title">Тайци-цигун</div>
+                                        <div class="video-status">Загрузка...</div>
+                                    </div>
+                                    <div class="loading-indicator" style="display: none;"></div>
+                                    <div class="play-overlay">
+                                        <svg class="play-icon" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button class="practiceBtn">Тайци-цигун</button>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+
+                <button id="nextBtnPr">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z"/>
+                    </svg>
+                </button>
+
+                <div class="event-mbtns">
+                    <button id="prevBtnPr1" class="events-mobile-Hprbtn">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1165_3505)">
+                      <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_1165_3505">
+                      <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                  </button>
+                  <button id="nextBtnPr">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z"/>
+                      </svg>
+                  </button>             
+                  </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn-more">Все практики</button>
+            </div>
+        </div>    
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    
+    <!-- LightGallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    
+    <!-- LightGallery Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/video/lg-video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/fullscreen/lg-fullscreen.min.js"></script>
+
+    <script>
+        // Инициализация Swiper
+        const swiper = new Swiper('.mySwiperPr', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: false,
+            loop: false,
+            grabCursor: true,
+            watchOverflow: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+            navigation: {
+                nextEl: '#nextBtnPr',
+                prevEl: '#prevBtnPr',
+            },
+        });
+
+        // Мобильные кнопки навигации
+        document.getElementById('prevBtnPr1').addEventListener('click', () => {
+            swiper.slidePrev();
+        });
+
+        document.getElementById('nextBtnPr2').addEventListener('click', () => {
+            swiper.slideNext();
+        });
+
+        // Инициализация LightGallery
+        const gallery = lightGallery(document.getElementById('video-gallery'), {
+            selector: '.pr-card-video-conteiner',
+            plugins: [lgVideo, lgThumbnail, lgZoom, lgFullscreen],
+            speed: 500,
+            licenseKey: '0000-0000-000-0000', // Для продакшена нужна лицензия
+            
+            // Настройки видео
+            videojs: true,
+            videojsTheme: 'vjs-default-skin',
+            gotoNextSlideOnVideoEnd: false,
+            autoplayFirstVideo: false,
+            youTubePlayerParams: {
+                modestbranding: 1,
+                showinfo: 0,
+                rel: 0,
+                controls: 1
+            },
+            vimeoPlayerParams: {
+                byline: 0,
+                portrait: 0,
+                color: 'A90707'
+            },
+            
+            // Настройки превью
+            thumbnail: true,
+            animateThumb: true,
+            allowMediaOverlap: true,
+            toggleThumb: true,
+            
+            // Настройки полноэкранного режима
+            fullScreen: true,
+            
+            // Кастомные настройки
+            closable: true,
+            loop: false,
+            counter: true,
+            download: false,
+            mobileSettings: {
+                controls: false,
+                showCloseIcon: true,
+                download: false
+            }
+        });
+
+        // Обработка видео для превью
+        document.querySelectorAll('.practice-video-card').forEach((card, index) => {
+            const video = card.querySelector('video');
+            const poster = card.querySelector('.video-poster');
+            const statusEl = card.querySelector('.video-status');
+            const loadingIndicator = card.querySelector('.loading-indicator');
+            const playOverlay = card.querySelector('.play-overlay');
+            
+            if (video) {
+                // Показываем индикатор загрузки
+                loadingIndicator.style.display = 'block';
+                
+                // Обработчики событий загрузки видео
+                video.addEventListener('loadstart', function() {
+                    console.log(`Video ${index + 1} started loading:`, video.src);
+                    if (statusEl) statusEl.textContent = 'Загрузка...';
+                });
+
+                video.addEventListener('loadedmetadata', function() {
+                    console.log(`Video ${index + 1} metadata loaded:`, video.src);
+                    loadingIndicator.style.display = 'none';
+                    card.classList.add('video-loaded');
+                    if (statusEl) statusEl.textContent = 'Наведите для просмотра';
+                });
+
+                video.addEventListener('canplaythrough', function() {
+                    console.log(`Video ${index + 1} can play through:`, video.src);
+                    if (statusEl) statusEl.textContent = 'Кликните для полного просмотра';
+                });
+
+                video.addEventListener('error', function(e) {
+                    console.error(`Video ${index + 1} failed to load:`, video.src, e);
+                    loadingIndicator.style.display = 'none';
+                    if (poster) {
+                        poster.style.display = 'flex';
+                        poster.querySelector('.video-title').textContent = 'Видео недоступно';
+                    }
+                    if (statusEl) statusEl.textContent = 'Ошибка загрузки';
+                });
+
+                // Hover эффекты для превью
+                card.addEventListener('mouseenter', function() {
+                    if (video.readyState >= 3) { // HAVE_FUTURE_DATA
+                        console.log(`Starting preview for video ${index + 1}`);
+                        card.classList.add('playing');
+                        video.currentTime = 0;
+                        
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                console.log(`Video ${index + 1} preview started`);
+                            }).catch(e => {
+                                console.log(`Video ${index + 1} preview blocked:`, e);
+                                if (playOverlay) playOverlay.style.opacity = '1';
+                            });
+                        }
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    card.classList.remove('playing');
+                    video.pause();
+                    video.currentTime = 0;
+                    if (playOverlay) playOverlay.style.opacity = '0';
+                });
+
+                // Принудительная загрузка видео
+                video.load();
+            }
+        });
+
+        // Обработчики событий LightGallery
+        gallery.LG.on('lgAfterOpen', (detail) => {
+            console.log('LightGallery opened');
+        });
+
+        gallery.LG.on('lgBeforeSlide', (detail) => {
+            console.log('Switching to slide:', detail.index);
+        });
+
+        gallery.LG.on
