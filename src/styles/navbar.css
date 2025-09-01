@@ -223,6 +223,10 @@
       height: auto !important;
     }
 
+     .navbar-toggler
+    {
+        display: flex !important;
+    }
     .navbar-brand {
       justify-content: flex-start !important;
     }
@@ -294,6 +298,11 @@
         font-weight: 400;
         line-height: normal;
 
+    }
+
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+      flex-direction: column;
     }
 
     .navbar-nav .nav-link:hover {

@@ -1,15 +1,45 @@
-
 class InbiNavbar extends HTMLElement {
     constructor() {
         super();
-        // НЕ используем Shadow DOM для Bootstrap совместимости
         this.isMenuOpen = false;
+        this.eventHandlers = new Map(); // Для отслеживания обработчиков
+        this.animationTimeout = null; // Для контроля анимаций
     }
 
     connectedCallback() {
         this.render();
         this.initMobileMenu();
         this.initScrollBehavior();
+    }
+
+    disconnectedCallback() {
+        this.cleanup();
+    }
+
+    cleanup() {
+        // Очищаем все обработчики событий
+        this.eventHandlers.forEach((handler, element) => {
+            element.removeEventListener(handler.event, handler.callback);
+        });
+        this.eventHandlers.clear();
+        
+        // Очищаем таймауты
+        if (this.animationTimeout) {
+            clearTimeout(this.animationTimeout);
+        }
+    }
+
+    addEventHandler(element, event, callback) {
+        // Удаляем предыдущий обработчик если есть
+        const key = `${element}_${event}`;
+        if (this.eventHandlers.has(key)) {
+            const oldHandler = this.eventHandlers.get(key);
+            element.removeEventListener(event, oldHandler.callback);
+        }
+        
+        // Добавляем новый
+        element.addEventListener(event, callback);
+        this.eventHandlers.set(key, { event, callback });
     }
 
     render() {
@@ -67,113 +97,149 @@ class InbiNavbar extends HTMLElement {
     }
 
     initMobileMenu() {
+        // Очищаем предыдущие обработчики
+        this.cleanup();
+        
         const navbarToggler = this.querySelector('.navbar-toggler');
         const navbarCollapse = this.querySelector('#navbarNav');
         const body = document.body;
 
         const initMobileMenuLogic = () => {
-            if (window.innerWidth <= 991) {
-
-                navbarToggler.removeAttribute('data-bs-toggle');
-                navbarToggler.removeAttribute('data-bs-target');
-                
-                const dropdownToggles = this.querySelectorAll('.nav-link.dropdown-toggle');
-                dropdownToggles.forEach(toggle => {
-                    toggle.removeAttribute('data-bs-toggle');
-                });
-                
-                this.isMenuOpen = false;
-
-                navbarToggler.addEventListener('click', () => {
-                    this.isMenuOpen = !this.isMenuOpen;
-                    
-                    if (this.isMenuOpen) {
-                        this.openMenu();
-                    } else {
-                        this.closeMenu();
-                    }
-                });
-
-
-                dropdownToggles.forEach(toggle => {
-                    toggle.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        const dropdownMenu = toggle.nextElementSibling;
-                        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-
-                        dropdownToggles.forEach(otherToggle => {
-                            if (otherToggle !== toggle) {
-                                const otherMenu = otherToggle.nextElementSibling;
-                                otherMenu.classList.remove('show');
-                                otherToggle.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-
-                        if (isExpanded) {
-                            dropdownMenu.classList.remove('show');
-                            toggle.setAttribute('aria-expanded', 'false');
-                        } else {
-                            dropdownMenu.classList.add('show');
-                            toggle.setAttribute('aria-expanded', 'true');
-                        }
-                    });
-                });
-
-                const navLinks = this.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        this.isMenuOpen = false;
-                        this.closeMenu();
-                    });
-                });
-
-                const dropdownItems = this.querySelectorAll('.dropdown-item');
-                dropdownItems.forEach(item => {
-                    item.addEventListener('click', () => {
-                        this.isMenuOpen = false;
-                        this.closeMenu();
-                    });
-                });
-
-                navbarCollapse.addEventListener('click', (e) => {
-                    if (e.target === navbarCollapse) {
-                        this.isMenuOpen = false;
-                        this.closeMenu();
-                    }
-                });
-
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && this.isMenuOpen) {
-                        this.isMenuOpen = false;
-                        this.closeMenu();
-                    }
-                });
-
+            if (window.innerWidth <= 1025) {
+                this.setupMobileMode(navbarToggler, navbarCollapse, body);
             } else {
-                navbarToggler.setAttribute('data-bs-toggle', 'collapse');
-                navbarToggler.setAttribute('data-bs-target', '#navbarNav');
-                
-                const dropdownToggles = this.querySelectorAll('.nav-link.dropdown-toggle');
-                dropdownToggles.forEach(toggle => {
-                    toggle.setAttribute('data-bs-toggle', 'dropdown');
-                });
-                
-
-                navbarCollapse.style.display = '';
-                navbarCollapse.style.opacity = '';
-                navbarCollapse.style.transform = '';
-                body.classList.remove('menu-open');
+                this.setupDesktopMode(navbarToggler, navbarCollapse, body);
             }
         };
 
         initMobileMenuLogic();
+        
+        // Добавляем обработчик resize с дебаунсом
+        let resizeTimeout;
+        const debouncedResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(initMobileMenuLogic, 150);
+        };
+        
+        this.addEventHandler(window, 'resize', debouncedResize);
+    }
 
-        window.addEventListener('resize', initMobileMenuLogic);
+    setupMobileMode(navbarToggler, navbarCollapse, body) {
+        // Убираем Bootstrap атрибуты
+        navbarToggler.removeAttribute('data-bs-toggle');
+        navbarToggler.removeAttribute('data-bs-target');
+        
+        const dropdownToggles = this.querySelectorAll('.nav-link.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.removeAttribute('data-bs-toggle');
+        });
+        
+        // Сбрасываем состояние
+        this.isMenuOpen = false;
+        this.closeMenu();
+
+        // Обработчик для кнопки меню
+        this.addEventHandler(navbarToggler, 'click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            this.isMenuOpen = !this.isMenuOpen;
+            
+            if (this.isMenuOpen) {
+                this.openMenu();
+            } else {
+                this.closeMenu();
+            }
+        });
+
+        // Обработчики для dropdown
+        dropdownToggles.forEach(toggle => {
+            this.addEventHandler(toggle, 'click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const dropdownMenu = toggle.nextElementSibling;
+                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+                // Закрываем другие dropdown
+                dropdownToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherMenu = otherToggle.nextElementSibling;
+                        otherMenu.classList.remove('show');
+                        otherToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Переключаем текущий dropdown
+                if (isExpanded) {
+                    dropdownMenu.classList.remove('show');
+                    toggle.setAttribute('aria-expanded', 'false');
+                } else {
+                    dropdownMenu.classList.add('show');
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Закрытие меню при клике на ссылки
+        const navLinks = this.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            this.addEventHandler(link, 'click', () => {
+                this.isMenuOpen = false;
+                this.closeMenu();
+            });
+        });
+
+        const dropdownItems = this.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+            this.addEventHandler(item, 'click', () => {
+                this.isMenuOpen = false;
+                this.closeMenu();
+            });
+        });
+
+        // Закрытие по Escape
+        this.addEventHandler(document, 'keydown', (e) => {
+            if (e.key === 'Escape' && this.isMenuOpen) {
+                this.isMenuOpen = false;
+                this.closeMenu();
+            }
+        });
+
+        // Закрытие при клике вне меню
+        this.addEventHandler(navbarCollapse, 'click', (e) => {
+            if (e.target === navbarCollapse) {
+                this.isMenuOpen = false;
+                this.closeMenu();
+            }
+        });
+    }
+
+    setupDesktopMode(navbarToggler, navbarCollapse, body) {
+        // Восстанавливаем Bootstrap атрибуты
+        navbarToggler.setAttribute('data-bs-toggle', 'collapse');
+        navbarToggler.setAttribute('data-bs-target', '#navbarNav');
+        
+        const dropdownToggles = this.querySelectorAll('.nav-link.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.setAttribute('data-bs-toggle', 'dropdown');
+        });
+        
+        // Сбрасываем мобильные стили
+        navbarCollapse.style.display = '';
+        navbarCollapse.style.opacity = '';
+        navbarCollapse.style.transform = '';
+        navbarCollapse.classList.remove('show');
+        body.classList.remove('menu-open');
+        
+        this.isMenuOpen = false;
     }
 
     openMenu() {
+        if (this.animationTimeout) {
+            clearTimeout(this.animationTimeout);
+        }
+
         const navbarCollapse = this.querySelector('#navbarNav');
         const navbarToggler = this.querySelector('.navbar-toggler');
         const body = document.body;
@@ -183,13 +249,18 @@ class InbiNavbar extends HTMLElement {
         navbarToggler.setAttribute('aria-expanded', 'true');
         body.classList.add('menu-open');
         
-        setTimeout(() => {
+        // Используем requestAnimationFrame для плавной анимации
+        requestAnimationFrame(() => {
             navbarCollapse.style.opacity = '1';
             navbarCollapse.style.transform = 'translateY(0)';
-        }, 10);
+        });
     }
 
     closeMenu() {
+        if (this.animationTimeout) {
+            clearTimeout(this.animationTimeout);
+        }
+
         const navbarCollapse = this.querySelector('#navbarNav');
         const navbarToggler = this.querySelector('.navbar-toggler');
         const body = document.body;
@@ -199,6 +270,7 @@ class InbiNavbar extends HTMLElement {
         navbarToggler.setAttribute('aria-expanded', 'false');
         body.classList.remove('menu-open');
         
+        // Закрываем все dropdown
         const openDropdowns = this.querySelectorAll('.dropdown-menu.show');
         openDropdowns.forEach(dropdown => {
             dropdown.classList.remove('show');
@@ -208,56 +280,34 @@ class InbiNavbar extends HTMLElement {
             }
         });
         
-        setTimeout(() => {
+        this.animationTimeout = setTimeout(() => {
             navbarCollapse.classList.remove('show');
             navbarCollapse.style.display = 'none';
+            this.animationTimeout = null;
         }, 300);
     }
 
     initScrollBehavior() {
         const navbar = this.querySelector('.navbar');
         
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        let ticking = false;
+        const handleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
-        });
+        };
+        
+        this.addEventHandler(window, 'scroll', handleScroll);
     }
 }
 
 customElements.define('inbi-navbar', InbiNavbar);
 
-// стили для навбара
-// const navbarStyles = document.createElement('style');
-// navbarStyles.textContent = `
-//     body { 
-//         padding-top: 128px; 
-//     }
-    
-//     .navbar.scrolled {
-//         background: rgba(248, 249, 250, 0.95) !important;
-//         backdrop-filter: blur(10px);
-//         box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-//     }
-    
-//     @media (max-width: 991px) {
-//         body.menu-open {
-//             overflow: hidden;
-//         }
-        
-//         #navbarNav {
-//             opacity: 0;
-//             transform: translateY(-20px);
-//             transition: all 0.3s ease;
-//         }
-        
-//         #navbarNav.show {
-//             opacity: 1 !important;
-//             transform: translateY(0) !important;
-//         }
-//     }
-// `;
-
-// document.head.appendChild(navbarStyles);
