@@ -9,9 +9,10 @@
     color: #000 !important;
     transition: color 0.3s ease;
     font-family: "AA Stetica medium";
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     line-height: 24px;
+    white-space: nowrap;
   }
   
   .navbar-nav .nav-link:hover {
@@ -216,7 +217,7 @@
     
   }
 
-   @media (min-width: 768px) and (max-width: 1024px) {
+   @media (min-width: 768px) and (max-width: 1500px) {
 
     .navbar {
       padding: 24px !important;

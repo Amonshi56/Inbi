@@ -55,7 +55,7 @@ class InbiNavbar extends HTMLElement {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                  
-                    <div class="col-8">
+                    <div class="col-8" style="display: flex;">
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
@@ -105,7 +105,7 @@ class InbiNavbar extends HTMLElement {
         const body = document.body;
 
         const initMobileMenuLogic = () => {
-            if (window.innerWidth <= 1025) {
+            if (window.innerWidth <= 1500) {
                 this.setupMobileMode(navbarToggler, navbarCollapse, body);
             } else {
                 this.setupDesktopMode(navbarToggler, navbarCollapse, body);

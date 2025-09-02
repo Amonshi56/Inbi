@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="113.386" height="113.386" viewBox="0 0 113.386 113.386">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(1,0,0,-1,0,113.386)" d="M0 0H113.386V113.386H0Z"/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip_0)">
+<path transform="matrix(1,0,0,-1,23.4087,54.592905)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 18.506 7.615 33.508 17.008 33.508 26.401 33.508 34.016 18.506 34.016 0 34.016-18.506 26.401-33.508 17.008-33.508 7.615-33.508 0-18.506 0 0Z"/>
+<path transform="matrix(1,0,0,-1,32.2695,54.1677)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 13.34 5.631 24.154 12.577 24.154 19.524 24.154 25.155 13.34 25.155 0 25.155-13.34 19.524-24.154 12.577-24.154 5.631-24.154 0-13.34 0 0Z"/>
+<path transform="matrix(1,0,0,-1,41.7031,54.8404)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 8.857 3.519 16.036 7.861 16.036 12.202 16.036 15.721 8.857 15.721 0 15.721-8.857 12.202-16.036 7.861-16.036 3.519-16.036 0-8.857 0 0Z"/>
+<path transform="matrix(1,0,0,-1,91.7844,54.592905)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 18.506-7.615 33.508-17.008 33.508-26.401 33.508-34.016 18.506-34.016 0-34.016-18.506-26.401-33.508-17.008-33.508-7.615-33.508 0-18.506 0 0Z"/>
+<path transform="matrix(1,0,0,-1,82.9236,54.1677)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 13.34-5.631 24.154-12.577 24.154-19.524 24.154-25.155 13.34-25.155 0-25.155-13.34-19.524-24.154-12.577-24.154-5.631-24.154 0-13.34 0 0Z"/>
+<path transform="matrix(1,0,0,-1,73.49,54.8404)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C0 8.857-3.519 16.036-7.861 16.036-12.202 16.036-15.721 8.857-15.721 0-15.721-8.857-12.202-16.036-7.861-16.036-3.519-16.036 0-8.857 0 0Z"/>
+<path transform="matrix(1,0,0,-1,57.5965,61.434804)" d="M0 0C-3.779 0-6.842 3.063-6.842 6.842-6.842 10.621-3.779 13.684 0 13.684 3.779 13.684 6.842 10.621 6.842 6.842 6.842 3.063 3.779 0 0 0" fill="#ffffff"/>
+<path transform="matrix(1,0,0,-1,57.5965,61.434804)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#231f20" d="M0 0C-3.779 0-6.842 3.063-6.842 6.842-6.842 10.621-3.779 13.684 0 13.684 3.779 13.684 6.842 10.621 6.842 6.842 6.842 3.063 3.779 0 0 0Z"/>
+</g>
+</svg>

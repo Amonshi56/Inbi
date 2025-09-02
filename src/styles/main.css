@@ -2,12 +2,14 @@
 
 @font-face {
   font-family: "AA Stetica";
-  src: url("../fonts/AA_Stetica_Regular.otf") format("opentype");
-  font-weight: 400;
+  src: url('../fonts/AAStetica-Regular.woff2') format('woff2'),
+       url('../fonts/AAStetica-Regular.woff') format('woff'),
+       url("../fonts/AA_Stetica_Regular.otf") format("opentype"),
+       url('../fonts/AAStetica-Regular.ttf') format('truetype');
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "AA Stetica";
   src: url("../fonts/AA_Stetica_Medium.otf") format("opentype");
   font-weight: 500;
@@ -19,7 +21,7 @@
   src: url("../fonts/AA_Stetica_Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 /* Custom CSS Variables */
 :root {
@@ -774,7 +776,6 @@
     gap: 40px;
     flex: 1 0 0;
     align-self: stretch;
-    justify-content: center;
     align-content: center;
     flex-direction: column;
     font-family: "AA Stetica";
@@ -827,8 +828,8 @@
   }
 
   .pricing-card {
-    width: 508px;
-    height: 543px;
+    width: 480px;
+    height: 510px;
     aspect-ratio: 29/31;
     display: flex;
     flex-direction: column;
@@ -1027,6 +1028,7 @@
 
   .telegramm {
     font-weight: 500 !important;
+    width: 300px;
   }
   
   /* Registration Form  */
@@ -1600,7 +1602,7 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1499px) {
     .hero-section {
       background-attachment: scroll;
     }
@@ -1918,4 +1920,12 @@
   }
   
 
+@media (min-width: 1500px) and (max-width: 1600px)  {
+  .master-sub-div {
+    transform: translateX(10%);
+  }  
 
+  .registration-card-body {
+    width: 760px;
+  }
+}
