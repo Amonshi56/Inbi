@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: "AA Stetica";
-  src: url('../fonts/AAStetica-Regular.woff2') format('woff2'),
-       url('../fonts/AAStetica-Regular.woff') format('woff'),
-       url("../fonts/AA_Stetica_Regular.otf") format("opentype"),
-       url('../fonts/AAStetica-Regular.ttf') format('truetype');
+  src: url('../founts/AAStetica-Regular.woff2') format('woff2'),
+       url('../founts/AAStetica-Regular.woff') format('woff'),
+       url("../founts/AA_Stetica_Regular.otf") format("opentype"),
+       url('../founts/AAStetica-Regular.ttf') format('truetype');
   font-style: normal;
 }
 
@@ -1478,6 +1478,10 @@
       flex-direction: column;
     }
 
+    .info-block {
+      height: 255px !important;
+    }
+
     .info-block-noBr-sub-m {
       display: none;
     }
@@ -1599,6 +1603,57 @@
     
     .practice-card {
       height: 200px !important;
+    }
+
+    /* video */
+    .pr-btn-hmoobile {
+      display: none;
+    }
+    
+    .event-mbtns {
+      display: flex;
+    }
+    
+    .video-status {
+      font-size: 12px;
+    }
+    
+    .video-title {
+      font-size: 16px;
+    }
+    
+    /* Показываем подсказку для касания на мобильных */
+    .video-poster::after {
+      content: "Коснитесь для предпросмотра";
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      opacity: 0.7;
+      text-align: center;
+    }
+    
+    /* Улучшаем отображение Fancybox на мобильных */
+    .fancybox-content {
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+    
+    .fancybox-slide--video .fancybox-content {
+      width: 100% !important;
+      height: 56.25vw !important; /* 16:9 aspect ratio */
+      max-height: 100vh !important;
+    }
+
+    .fancybox-image {
+      object-fit: contain;
+    }
+
+    .fancybox-content {
+      display: contents;
     }
   }
 

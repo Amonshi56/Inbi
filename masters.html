@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <!-- <link href="./src/styles/reviews.css" rel="stylesheet" /> -->
+  <link href="./src/styles/masters.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+
+  <!-- masters -->
+  <section class="section_standart" style="margin-top: 300px;">
+    <img src="./src/images/masters_top.png" alt="фон" class="bg-img mobile-hidd">  
+    <div class="masters-container">
+        <p class="masters-header">Мастера</p>
+         <!-- Фильтры -->
+         <div class="filter-panel">
+            <div class="filter-row">
+              <div class="filter-group">
+                <label class="filter-label">
+                  Город
+                  <div style="display: flex;">
+                    <span class="filter-counter" id="cityCounter" style="display: none;">0</span>
+                    <img src="./src/icons/drop_closed.svg" alt="arrow" class="filter-icon">
+                  </div>
+                </label>
+                <div class="filter-checkbox-group" id="cityFilters">
+
+                  <!-- Примеры чекбоксов -->
+                  <!-- <div class="filter-checkbox-item">
+                    <input type="checkbox" class="filter-checkbox" id="cityFilters_Москва" value="Москва">
+                    <label class="filter-checkbox-label" for="cityFilters_Москва">Москва</label>
+                  </div> -->
+
+                </div>
+              </div>
+              <div class="filter-group">
+                <label class="filter-label">
+                  Вид практики
+                  <div style="display: flex;">
+                    <span class="filter-counter" id="practiceCounter" style="display: none;">0</span>
+                    <img src="./src/icons/drop_closed.svg" alt="arrow" class="filter-icon">
+                  </div>
+                </label>
+                <div class="filter-checkbox-group" id="practiceFilters">
+
+                  <!-- Примеры чекбоксов -->
+                  <!-- <div class="filter-checkbox-item">
+                    <input type="checkbox" class="filter-checkbox" id="practiceFilters_Цигун" value="Цигун">
+                    <label class="filter-checkbox-label" for="practiceFilters_Цигун">Цигун</label>
+                  </div> -->
+
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <!-- Сетка карточек -->
+        <div class="masters-grid" id="mastersGrid">
+          <!-- Пример карточки -->
+          <!-- <div class="master-card-div">
+            <div class="master-photo-div">
+              <img src="./src/images/Алхим.png" alt="" class="master-photo">
+            </div>
+            <div>
+              <p class="master-name" id="first_name">Имя</p>
+              <p class="master-name" id="second_name">Фамилия</p>
+              <p id="city" style="display: none;">Москва</p>
+              <div id="practice-box" style="display: none;">
+                <p>Цигун</p>
+                <p>Багуа</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        
+        <!-- Сообщение об отсутствии результатов -->
+        <div class="no-results hidden" id="noResults">
+            Мастера по данному направлению не найдены
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="pagination" id="pagination">
+        </div>
+    </div>
+    <img src="./src/images/masters_bott.png" alt="фон" class="bg-img-bot mobile-hidd">
+  </section>  
+
+  <!-- personality -->
+  <section class="section_standart">
+    <div class="personality-container">
+      <p class="masters-header">Личности</p>
+      <div class="personality-cards-div">
+
+        <div class="personality-card-body">
+          <div class="personality-card-img-div">
+            <img src="./src/images/Алхим.png" alt="" class="master-photo personality-card-img">
+          </div>
+          <div class="name-div">
+            <p class="master-name">Имя</p>
+            <p class="master-name">Фамилия</p>
+          </div>
+        </div>
+
+        
+        <div class="personality-card-body">
+          <div class="personality-card-img-div">
+            <img src="./src/images/Алхим.png" alt="" class="master-photo personality-card-img">
+          </div>
+          <div class="name-div">
+            <p class="master-name">Имя</p>
+            <p class="master-name">Фамилия</p>
+          </div>
+        </div>
+
+        
+        <div class="personality-card-body">
+          <div class="personality-card-img-div">
+            <img src="./src/images/Алхим.png" alt="" class="master-photo personality-card-img">
+          </div>
+          <div class="name-div">
+            <p class="master-name">Имя</p>
+            <p class="master-name">Фамилия</p>
+          </div>
+        </div>
+
+        
+        <div class="personality-card-body">
+          <div class="personality-card-img-div">
+            <img src="./src/images/Алхим.png" alt="" class="master-photo personality-card-img">
+          </div>
+          <div class="name-div">
+            <p class="master-name">Имя</p>
+            <p class="master-name">Фамилия</p>
+          </div>
+        </div>
+
+        
+        <div class="personality-card-body">
+          <div class="personality-card-img-div">
+            <img src="./src/images/Алхим.png" alt="" class="master-photo personality-card-img">
+          </div>
+          <div class="name-div">
+            <p class="master-name">Имя</p>
+            <p class="master-name">Фамилия</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- founder -->
+  <section class="section_founder" style="background-color: #1A1715;">
+    <div class="founder-container">
+      <div class="founder-div">
+        <div class="founder-photo-div">
+          <img src="./src/images/masters_founder.jpg" alt="" class="founder-photo">
+        </div>
+        <div class="founder-info-div">
+          <p class="display-4 mb-4 chom-header">ЧОМ</p>
+          <p class="border-chom">Основатель</p>
+          <p class="lead" style="white-space: break-spaces !important; font-size: 16px;">
+            Один из патриархов системы INBI World, старейший член клуба ИНБИ-Москва. Начал активно заниматься в 1993 году, член клуба с 1994 года. В 1995 году участвовал в организации первых общеклубных сборов в Македонии. С 1996 по 2000 год принимал участие в организации мероприятий в России, Польше, Словении, Прибалтике, Испании. Практически ни одно начинание не проходило без него.
+            <br>
+            Изучал большинство практик, преподаваемых в клубе в девяностые годы: кендо, йайдо, пенчак-силат, капоэйру. В это же время начал более углубленно изучать даосские практики: тайцзи-цюань, багуа-чжан, син’и, даосскую йогу, в которых совершенствуется и поныне. Неоднократно принимал участие в кемпах по тайцзи-цюань, проводимых грандмастером Чэнь...  
+          </p>
+          <button class="btn-more btn-link">
+            Подробнее
+          </button>
+        </div>
+      </div>
+      <button class="practiceBtn telegramm">
+        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1165_5488)">
+          <path d="M31.4567 5.10209C31.9792 4.89886 32.5712 5.0038 32.9918 5.37455C33.4123 5.74522 33.5905 6.319 33.4547 6.86283L27.4547 30.8628C27.3236 31.3871 26.9208 31.8011 26.4 31.9453C25.8794 32.0894 25.3216 31.9421 24.9396 31.5601L18.6613 25.2818L15.1998 29.899C14.8651 30.3453 14.3106 30.5698 13.7599 30.4805C13.2093 30.3912 12.7543 30.0032 12.5778 29.4742L9.77405 21.063L4.32923 18.3413C3.79877 18.0761 3.47437 17.5231 3.50159 16.9307C3.5291 16.338 3.90371 15.8171 4.45667 15.6021L31.4567 5.10209ZM8.69592 17.1695L11.671 18.6578L11.7999 18.731C12.0918 18.915 12.3123 19.1948 12.4225 19.5249L14.5172 25.8091L16.5197 23.1402L15.9396 22.5601C15.3538 21.9743 15.3538 21.0248 15.9396 20.439L21.9396 14.439C22.5254 13.8532 23.4749 13.8532 24.0607 14.439C24.6465 15.0248 24.6465 15.9743 24.0607 16.5601L19.1212 21.4995L25.1871 27.5655L29.8424 8.9473L8.69592 17.1695Z" fill="currentColor"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1165_5488">
+          <rect width="36" height="36" fill="white" transform="translate(0.5 0.5)"/>
+          </clipPath>
+          </defs>
+        </svg>
+        Мы в телеграмм
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <!-- slick-carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+  <script src="./src/js/masters.js"></script>
+</body>
+</html>

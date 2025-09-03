@@ -74,7 +74,7 @@ class InbiNavbar extends HTMLElement {
                                     </a>
                                     <ul class="dropdown-menu custom-dropdown">
                                         <li><a class="dropdown-item" href="about_us.html" id="about_us_btn">О клубе ИНБИ</a></li>
-                                        <li><a class="dropdown-item" href="#masters">Мастера</a></li>
+                                        <li><a class="dropdown-item" href="./masters.html" id="masters_btn">Мастера</a></li>
                                         <li><a class="dropdown-item" href="#founder">Основатель</a></li>
                                         <li><a class="dropdown-item" href="./reviews.html" id="reviews_btn">Отзывы</a></li>
                                         <li><a class="dropdown-item" href="#gallery">Фотогалерея</a></li>

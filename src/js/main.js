@@ -256,7 +256,6 @@ AOS.init({
 
 
 $('[data-fancybox="video-gallery"]').fancybox({
-  // Настройки видео
   youtube: {
       controls: 1,
       showinfo: 0,
@@ -265,45 +264,59 @@ $('[data-fancybox="video-gallery"]').fancybox({
   vimeo: {
       color: 'f00'
   },
-  
-  // Основные настройки
   toolbar: true,
   smallBtn: true,
   iframe: {
       preload: false
   },
-  
-  // Настройки воспроизведения
   video: {
       autoStart: true,
       ratio: 16/9
   },
-  
-  // Анимация и интерфейс
   animationEffect: 'zoom-in-out',
   animationDuration: 300,
   transitionEffect: 'slide',
   transitionDuration: 300,
-  
-  // Кнопки управления
   buttons: [
       'zoom',
       'slideShow',
       'fullScreen',
       'close'
   ],
-  
-  // Колбеки
-  beforeShow: function(instance, current) {
-      console.log('Fancybox opening video:', current.src);
+  // Специальные настройки для мобильных
+  mobile: {
+    clickContent: function(current, event) {
+      return current.type === 'video' ? 'toggleControls' : false;
+    },
+    clickSlide: function(current, event) {
+      return current.type === 'video' ? 'toggleControls' : 'close';
+    }
   },
-  
-  afterShow: function(instance, current) {
-      console.log('Fancybox video opened');
-  }
+  // Настройки размера для мобильных
+  beforeShow: function(instance, current) {
+    console.log('Fancybox opening video:', current.src);
+    // Для мобильных устройств
+    if (window.innerWidth <= 768) {
+      instance.group[instance.currIndex].opts.width = '100%';
+      instance.group[instance.currIndex].opts.height = '100%';
+      instance.group[instance.currIndex].opts.margin = [0, 0];
+    }
+  },
+  // afterShow: function(instance, current) {
+  //   console.log('Fancybox video opened');
+  //   // Для мобильных - скрываем некнужные элементы
+  //   if (window.innerWidth <= 768) {
+  //     $('.fancybox-content').css({
+  //       'width': '100%',
+  //       'height': 'auto',
+  //       'max-width': '100%',
+  //       'max-height': '100%'
+  //     });
+  //   }
+  // }
 });
 
-// Обработка видео для превью
+// Обработка видео превью
 document.querySelectorAll('.practice-video-card').forEach((card, index) => {
   const video = card.querySelector('video');
   const poster = card.querySelector('.video-poster');
@@ -312,8 +325,10 @@ document.querySelectorAll('.practice-video-card').forEach((card, index) => {
   const playOverlay = card.querySelector('.play-overlay');
   
   if (video) {
+      console.log(`Initializing video ${index + 1}:`, video.src);
+      
       // Показываем индикатор загрузки
-      loadingIndicator.style.display = 'block';
+      if (loadingIndicator) loadingIndicator.style.display = 'block';
       
       // Обработчики событий загрузки видео
       video.addEventListener('loadstart', function() {
@@ -323,7 +338,7 @@ document.querySelectorAll('.practice-video-card').forEach((card, index) => {
 
       video.addEventListener('loadedmetadata', function() {
           console.log(`Video ${index + 1} metadata loaded:`, video.src);
-          loadingIndicator.style.display = 'none';
+          if (loadingIndicator) loadingIndicator.style.display = 'none';
           card.classList.add('video-loaded');
           if (statusEl) statusEl.textContent = 'Наведите для просмотра';
       });
@@ -335,44 +350,94 @@ document.querySelectorAll('.practice-video-card').forEach((card, index) => {
 
       video.addEventListener('error', function(e) {
           console.error(`Video ${index + 1} failed to load:`, video.src, e);
-          loadingIndicator.style.display = 'none';
+          if (loadingIndicator) loadingIndicator.style.display = 'none';
           if (poster) {
               poster.style.display = 'flex';
-              poster.querySelector('.video-title').textContent = 'Видео недоступно';
+              const titleEl = poster.querySelector('.video-title');
+              if (titleEl) titleEl.textContent = 'Видео недоступно';
           }
           if (statusEl) statusEl.textContent = 'Ошибка загрузки';
       });
 
-      // Hover эффекты для превью
-      card.addEventListener('mouseenter', function() {
-          if (video.readyState >= 3) { // HAVE_FUTURE_DATA
-              console.log(`Starting preview for video ${index + 1}`);
-              card.classList.add('playing');
-              video.currentTime = 0;
-              
-              const playPromise = video.play();
-              if (playPromise !== undefined) {
-                  playPromise.then(() => {
-                      console.log(`Video ${index + 1} preview started`);
-                  }).catch(e => {
-                      console.log(`Video ${index + 1} preview blocked:`, e);
-                      if (playOverlay) playOverlay.style.opacity = '1';
-                  });
-              }
-          }
-      });
+      // Проверяем, поддерживает ли устройство touch
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       
-      card.addEventListener('mouseleave', function() {
-          card.classList.remove('playing');
-          video.pause();
-          video.currentTime = 0;
-          if (playOverlay) playOverlay.style.opacity = '0';
-      });
+      if (isTouchDevice) {
+          // Для мобильных устройств - используем touchstart/touchend
+          let touchTimer;
+          
+          card.addEventListener('touchstart', function(e) {
+              if (video.readyState >= 3) {
+                  console.log(`Starting mobile preview for video ${index + 1}`);
+                  card.classList.add('playing');
+                  video.currentTime = 0;
+                  video.volume = 0.3; // Устанавливаем громкость на 30%
+                  
+                  const playPromise = video.play();
+                  if (playPromise !== undefined) {
+                      playPromise.then(() => {
+                          console.log(`Video ${index + 1} mobile preview started`);
+                      }).catch(e => {
+                          console.log(`Video ${index + 1} mobile preview blocked:`, e);
+                          if (playOverlay) playOverlay.style.opacity = '1';
+                      });
+                  }
+                  
+                  // Автоматически останавливаем через 3 секунды
+                  touchTimer = setTimeout(() => {
+                      card.classList.remove('playing');
+                      video.pause();
+                      video.currentTime = 0;
+                      if (playOverlay) playOverlay.style.opacity = '0';
+                  }, 3000);
+              }
+          });
+          
+          card.addEventListener('touchend', function() {
+              // Очищаем таймер если пользователь убрал палец
+              clearTimeout(touchTimer);
+              setTimeout(() => {
+                  card.classList.remove('playing');
+                  video.pause();
+                  video.currentTime = 0;
+                  if (playOverlay) playOverlay.style.opacity = '0';
+              }, 500); // Даем небольшую задержку
+          });
+          
+      } else {
+          // Для десктопа - используем mouse события
+          card.addEventListener('mouseenter', function() {
+              if (video.readyState >= 3) { // HAVE_FUTURE_DATA
+                  console.log(`Starting preview for video ${index + 1}`);
+                  card.classList.add('playing');
+                  video.currentTime = 0;
+                  video.volume = 0.3; // Устанавливаем громкость на 30%
+                  
+                  const playPromise = video.play();
+                  if (playPromise !== undefined) {
+                      playPromise.then(() => {
+                          console.log(`Video ${index + 1} preview started`);
+                      }).catch(e => {
+                          console.log(`Video ${index + 1} preview blocked:`, e);
+                          if (playOverlay) playOverlay.style.opacity = '1';
+                      });
+                  }
+              }
+          });
+          
+          card.addEventListener('mouseleave', function() {
+              card.classList.remove('playing');
+              video.pause();
+              video.currentTime = 0;
+              if (playOverlay) playOverlay.style.opacity = '0';
+          });
+      }
 
       // Принудительная загрузка видео
       video.load();
   }
 });
+
 
 // Предотвращаем клик по кнопке от открытия галереи
 $('.practiceBtn').click(function(e) {
