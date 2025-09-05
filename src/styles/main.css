@@ -1010,6 +1010,49 @@
     display: none !important;
   }
 
+  .mySwiperPhotoM  .swiper-wrapper {
+    gap: 0 !important;
+}
+
+.mySwiperPhotoM .swiper-slide {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    width: auto !important;
+}
+
+.mySwiperPhotoM .swiper-slide img {
+    display: block;  /* убирает пробелы под изображениями */
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.mySwiperPhotoM  .swip-photo-conteiner {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: scale-down !important;
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    vertical-align: top !important;
+    /* Убираем все возможные пробелы */
+    line-height: 0;
+    font-size: 0;
+}
+
+
+.mySwiperPhotoM {
+    height: 300px; /* или любая другая высота которая вам нужна */
+    overflow: hidden;
+}
+
+.mySwiperPhotoM .swip-photo-conteiner {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover; 
+}
   /* FAQ section */
 
   .faq-section {

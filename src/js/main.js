@@ -47,20 +47,10 @@ $(document).ready(function() {
   document.getElementById('prevBtnPr1')?.addEventListener('click', () => swiperPr.slidePrev());
   document.getElementById('nextBtnPr')?.addEventListener('click', () => swiperPr.slideNext());  
 
-  const mySwiperPhoto = new Swiper('.mySwiperPhoto', {
-    slidesPerView: 3, 
-    spaceBetween: 20,
-    loop: false,      
-    pagination: {
-      el: '.swiper-pagination', 
-      clickable: true
-    },
-    breakpoints: {
-      0: { slidesPerView: 1 },        
-      800: { slidesPerView: 2 },     
-      992: { slidesPerView: 2 },
-      1025: { slidesPerView: 3 }  
-    }
+  const mySwiperPhotoM = new Swiper('.mySwiperPhotoM', {
+    slidesPerView: "auto",    
+    spaceBetween: 1,                      
+    freeMode: true      
   });
 });
 

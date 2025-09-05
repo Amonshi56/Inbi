@@ -8,6 +8,10 @@ const mySwiperPhotoM = new Swiper('.mySwiperPhotoM', {
   const mySwiperPractice = new Swiper('.mySwiperPractice', {
     slidesPerView: 1,
     spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,          
+    }
 });
  
 document.getElementById('prevBtnPr')?.addEventListener('click', () => mySwiperPractice.slidePrev());

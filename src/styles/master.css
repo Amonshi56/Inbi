@@ -41,8 +41,8 @@
 
   .bg-img {
     position: absolute;
-    top: 200px;
-    right: 0;
+    top: 400px;
+    left: 0;
     z-index: -100;
     opacity: 0.5;
   }
@@ -492,6 +492,22 @@
     align-self: center;
 }
 
+
+.swiper-pagination {
+    margin-top: -40px !important;
+}
+.swiper-pagination-bullet {
+    width: 28px;
+    height: 28px;
+    background: #F6E2DB !important;
+    opacity: 0.7;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #F6E2DB !important;
+    color: #C99F90 !important;
+    opacity: 1;
+  }
 
 
 @media (max-width: 767px) {
