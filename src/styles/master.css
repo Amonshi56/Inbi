@@ -1,0 +1,637 @@
+.master-info-div {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .master-div {
+    flex-direction: row;
+    display: flex;
+    gap: 72px;
+    width: 100%;
+  }
+
+  .border-chom{
+    color: black;
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .master-header {
+    color: var(--Text-primary, #000);
+    font-family: Ledger;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+  .master-more:hover {
+    border-color: #C58C78 !important;
+    color: #C58C78 !important;
+  }
+
+  #masters_btn {
+    color: rgba(114, 121, 103, 1) !important;
+  }
+
+  .bg-img {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: -100;
+    opacity: 0.5;
+  }
+
+  .bg-img-bot {
+    position: absolute;
+    top: 1300px;
+    left: 0;
+    z-index: -100;
+    opacity: 0.5;
+  }  
+
+  .master-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 72px;
+    justify-content: center;
+  }
+
+  .master-photo-div {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 520px;
+    min-width: 520px;
+    max-width: 520px;
+    min-height: 520px;
+    max-height: 520px;
+    border: 4px solid #909785;
+    width: 100%;
+  }
+
+  .master-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    aspect-ratio: 1/1;
+  }
+
+  .master-stat {
+    color: var(--Text-Secondary, #565351);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; 
+    text-transform: uppercase;  
+  }
+
+  .master-stat-head {
+    color: var(--Text-primary, #000);
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 18px;
+  }
+
+  .master-stat-div {
+    border-top: 1px solid #909785;
+    border-bottom: 1px solid #909785;
+    display: flex;
+    padding: 14px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch; 
+  }
+
+  .master-more {
+    width: 150px;
+    align-self: flex-end;
+  }
+
+  .lead {
+    white-space: break-spaces !important;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 11; /* показываем 11 строк */
+    transition: max-height 0.3s ease;
+  }
+  
+  .lead.expanded {
+    -webkit-line-clamp: unset; /* снимаем ограничение */
+  }
+
+.mySwiperPhotoM  .swiper-wrapper {
+    gap: 0 !important;
+}
+
+.mySwiperPhotoM .swiper-slide {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    width: auto !important;
+}
+
+.mySwiperPhotoM .swiper-slide img {
+    display: block;  /* убирает пробелы под изображениями */
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.mySwiperPhotoM  .swip-photo-conteiner {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: scale-down !important;
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    vertical-align: top !important;
+    /* Убираем все возможные пробелы */
+    line-height: 0;
+    font-size: 0;
+}
+
+.swip-photo-conteiner {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover ;
+    display: flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    vertical-align: top !important;
+    /* Убираем все возможные пробелы */
+    line-height: 0;
+    font-size: 0;
+}
+
+.mySwiperPhotoM {
+    height: 300px; /* или любая другая высота которая вам нужна */
+    overflow: hidden;
+}
+
+.swip-photo-conteiner {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover; 
+}
+
+.practice-head-text {
+    color: var(--Text-primary, #000);
+    font-family: Ledger;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.practice-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%; 
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.day-head {
+    display: flex;
+    padding: 12px 18px;
+    align-items: center;
+    border-radius: 36px;
+    border: 1px solid #C99F90;
+    background: #FFF2EE;
+    color: #C58C78;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.practice-card-body {
+    display: flex;
+    padding: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20.9px 0 #CECBC9;
+    padding: 20px;
+}
+
+.practice-card-body-half {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.practice-card-time {
+    color:  #702C29;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.practice-card-header {
+    color: var(--Text-primary, #000);
+    font-family: "AA Stetica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.practice-card-info {
+    color: #565351;
+    font-family: "AA Stetica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+}
+
+
+.day-head.active .filter-icon{
+    transform: rotate(180deg);
+}
+
+.day-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-icon {
+    display: none;
+}
+/* Анимация появления карточек */
+.practice-card-body {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.day-content.active .practice-card-body:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.day-content.active .practice-card-body:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.day-content.active .practice-card-body:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* events */
+.master-events-container {
+    display: flex;
+    flex-direction: column;
+    gap:72px;
+}
+
+.master-events-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%; 
+}
+
+.pr-type-card-discr {
+    display: flex;
+    flex-direction: column;
+}
+
+.pr-type-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 72px;
+}
+
+.pr-type-img-div {
+    display: flex;
+    width: 292px;
+    height: 519px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    aspect-ratio: 292/519;
+}
+
+.pr-type-card-head {
+    color: var(--Text-primary, #000);
+    text-align: center;
+    font-family: Ledger;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    align-self: center;
+    line-height: normal;
+}
+
+.pr-type-card-body {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    box-sizing: border-box;
+    overflow: hidden;          /* не даём вылазить */
+    word-wrap: break-word;     /* старый синтаксис */
+    overflow-wrap: anywhere;   /* перенос слов */
+    white-space: normal;  
+    height: 100%;
+}
+
+.pr-type-card-discr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
+    flex: 1 0 0;
+}
+
+.pr-card-text-title {
+    white-space: normal !important;
+    word-break: break-word !important;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-family: "AA Stetica";
+    font-size: 16px !important;
+}
+
+.pr-type-swapper-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.mySwiperPractice  .swiper-slide {
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    
+    /* presentation  */
+
+.presentation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    width: 100%;
+}    
+
+.master_hor_simb {
+    background: transparent;
+    align-self: center;
+}
+
+/* review */
+
+.master-review-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+
+}
+
+.send-rev-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+    grid-template-rows: repeat 3;
+    overflow: hidden;
+    padding: 32px;
+}
+
+.item1 {
+    grid-column: span 2;
+    grid-row: span 3;
+    width: 100% !important;
+    margin: 0px;
+  }
+  
+.master-review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; 
+}
+
+
+.master-review-text {
+    white-space: break-spaces !important;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 5; 
+    transition: max-height 0.3s ease;
+}
+
+.expanded {
+    -webkit-line-clamp: unset !important; 
+    display: flex !important; 
+  }
+
+.cardBott {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rdate {
+    align-self: center;
+}
+
+
+
+@media (max-width: 767px) {
+    .master-photo-div {
+        height: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 300px;
+        max-height: 300px;
+        align-self: center;
+
+    }
+
+    .master-div {
+        flex-direction: column;
+    }
+
+    .practice-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day-head {
+        width: 100%;
+        text-align: start !important;
+        content: "2";
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .day-head.active  {
+        width: 100%;
+        text-align: start !important;
+        content: "1";
+    }
+
+    .day-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0px 20px;
+
+    }
+
+    .day-content.active {
+        max-height: 1000px;
+        padding: 20px
+    }
+
+    .filter-icon {
+        display: flex;
+    }
+
+    .master-events-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pr-type-swapper-div {
+        flex-direction: column;
+    }
+
+    .pr-type-card-discr {
+        gap: 32px;
+    }
+
+    .more {
+        width: 100%;
+    }
+
+    .send-rev-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fancybox-image {
+        object-fit: contain !important;
+      }
+  
+      .fancybox-content {
+        display: contents !important;
+      }
+}
+
+@media (min-width: 768px) and (max-width: 1499px) {
+    .master-photo-div {
+        height: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 400px;
+        max-height: 400px;
+
+    }
+
+    .practice-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day-head {
+        width: 100%;
+        text-align: start !important;
+        content: "2";
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .day-head.active  {
+        width: 100%;
+        text-align: start !important;
+        content: "1";
+    }
+
+    .day-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0px 20px;
+
+    }
+
+    .day-content.active {
+        max-height: 1000px;
+        padding: 20px
+    }
+
+    .filter-icon {
+        display: flex;
+    }
+
+    .more {
+        width: 100%;
+    }
+    
+    .send-rev-con {
+        display: flex;
+        flex-direction: column;
+    }
+}    
+        
+        
+@media (min-width: 1500px) and (max-width: 1600px)  {
+}    

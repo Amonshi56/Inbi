@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/reviews.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <link href="./src/styles/master.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+
+
+  <!-- master-info  -->
+   <section class="section_standart" style="margin-top: 300px;">
+        <div class="master-container">
+          <div class="master-div">
+            <div class="master-photo-div">
+              <img src="./src/images/Алх.jpg" alt="" class="master-photo">
+            </div>
+            <div class="master-info-div">
+              <div>
+                <p class="master-header">Имя</p>
+                <p class="master-header">Фамилия</p>
+              </div>
+              <div class="master-stat-div">
+                <p class="master-stat-head" >Мастер</p>
+                <p class="master-stat">Опыт преподавания: 6</p>
+                <p class="master-stat">Опыт личной практики: 6</p>
+              </div>  
+              <p class="lead" style="white-space: break-spaces !important; font-size: 16px;">
+                Один из патриархов системы INBI World, старейший член клуба ИНБИ-Москва. Начал активно заниматься в 1993 году, член клуба с 1994 года. В 1995 году участвовал в организации первых общеклубных сборов в Македонии. С 1996 по 2000 год принимал участие в организации мероприятий в России, Польше, Словении, Прибалтике, Испании. Практически ни одно начинание не проходило без него.
+                Изучал большинство практик, преподаваемых в клубе в девяностые годы: кендо, йайдо, пенчак-силат, капоэйру. В это же время начал более углубленно изучать даосские практики: тайцзи-цюань, багуа-чжан, син’и, даосскую йогу, в которых совершенствуется и поныне. Неоднократно принимал участие в кемпах по тайцзи-цюань, проводимых грандмастером Чэнь Сяованом в России и за рубежом. В настоящее время ведет занятия багуа-чжан.
+                Также Антон Дубец имеет стаж научной работы. Окончил Московский институт стали и сплавов, работал научным сотрудником в НИИ, занимался полупроводниковыми материалами. Еще в институте начал осваивать профессию программиста и постепенно сменил сферу деятельности. Сейчас руководит отделом разработки программного обеспечения в крупном рекрутинговом агентстве.                
+              </p>
+              <button class="btn-more btn-link master-more">
+                Подробнее
+              </button>
+               
+            </div>
+            
+        </div>
+        <div style="width: 100%;display: block;">
+            
+            <div class="swiper mySwiperPhotoM">
+                <div class="swiper-wrapper">
+                        
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery"  href="./src/images/chom.png">
+                        <img src="./src/images/chom.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide"> 
+                    <a data-fancybox="gallery" href="./src/images/Алх.jpg">
+                        <img src="./src/images/Алх.jpg" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery"  href="./src/images/ИндАлх.png">
+                        <img src="./src/images/ИндАлх.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="./src/images/chom.png">
+                        <img src="./src/images/chom.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+
+                </div>
+            </div>
+
+        </div> 
+   </section>
+
+   <!-- practice time-->
+   <section class="section_standart" style="display: flex; flex-direction: column; gap: 72px;">
+    <p class="practice-head-text">Занятия</p>
+    <div class="practice-div">
+        <div class="day-container">
+            <p class="day-head" onclick="toggleDay(this)">ВТ<span><img src="./src/icons/day_dropdown.svg" alt="arrow" class="filter-icon"></span></p>
+            <div class="day-content">
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-container">
+
+            <p class="day-head" onclick="toggleDay(this)">СБ<span><img src="./src/icons/day_dropdown.svg" alt="arrow" class="filter-icon"></span></p>
+            <div class="day-content">
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <!-- events -->
+    <section class="section_standart">
+        <div class="master-events-container">
+            <p class="practice-head-text">Ближайшие мероприятия</p>
+            <div class="master-events-div">
+
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- practice type -->
+    <section class="section_standart" style="justify-content: center;">
+        <div class="pr-type-container">
+            <p class="practice-head-text">Виды преподаваетмых практик</p>
+            <div class="pr-type-swapper-div">
+                <button id="prevBtnPr" class="pr-btn-hmoobile mobile-hidd" style="align-self: center;">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1165_3505)">
+                            <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1165_3505">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="swiper mySwiperPractice">
+                    <div class="swiper-wrapper">
+                    
+                        <div class="swiper-slide">
+                            <div class="pr-type-card-body">
+                                <div class="pr-type-img-div mobile-hidd"><img src="./src/images/Алх.jpg" class="swip-photo-conteiner" alt="Фото 1"></div>
+                                <div class="pr-type-card-discr">
+                                    <p class="pr-type-card-head">Даосская алхимия</p>
+                                    <p class="card-title pr-card-text-title" style="white-space: break-spaces !important; word-break: break-all;">ОписаниеОписаниеОписаниеОпис аниеОписаниеОписаниеОписан иеОписаниеОписаниеОписани </p>
+                                    <button class="btn more" style="display: flex;align-self: flex-end;">Подробнее</button>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="pr-type-card-body">
+                                <div class="pr-type-img-div mobile-hidd"><img src="./src/images/ИндАлх.png" class="swip-photo-conteiner" alt="Фото 1"></div>
+                                <div class="pr-type-card-discr">
+                                    <p class="pr-type-card-head">Индийская алхимия</p>
+                                    <p class="card-title pr-card-text-title" style="white-space: break-spaces !important; word-break: break-all;">hfghfghfghfgh</p>
+                                    <button class="btn more" style="display: flex;align-self: flex-end;">Подробнее</button>
+                                </div>
+                            </div> 
+                        </div>
+                    
+
+                    </div>
+                </div>
+                <div class="event-mbtns" style="align-self: center;">
+                    <button id="prevBtnPr1" class="events-mobile-Hprbtn" style="align-self: center;">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1165_3505)">
+                        <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1165_3505">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </button>
+                    <button id="nextBtnPr" style="align-self: center;">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z"/>
+                        </svg>
+                    </button> 
+                </div>
+            </div>         
+        </div>
+    </section>
+
+    <!-- presentation -->
+
+    <section class="section_standart">
+        <div class="presentation-container">
+            <div>
+                Презентационные материалы
+            </div>
+            <img src="./src/images/master_hor_simb.png" class="master_hor_simb" alt="Фото 1">    
+        </div>
+    </section>
+
+    <!-- review -->
+
+      <section class="send-rev-sec" >
+        <div class="send-rev-con" id="grid">
+            <div class="send_rev_form item1" id="reviewForm">
+                <p class="registration-card-head">Оставить отзыв</p>
+                
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="star-label"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="star-label"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="star-label"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="star-label"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="star-label"></label>
+                </div>
+                
+                <form class="input-block" style="animation-delay: 0.2s;">
+                    
+                    <label for="Name" class="input-header">Ваше имя</label>
+                    <input type="text" class="input-container" id="Name" placeholder="Напишите">
+                
+                    <label for="city" class="input-header">Город</label>
+                    <input type="city" class="input-container" id="city" placeholder="Напишите">
+                
+                    <label for="practice" class="input-header">Вид практики</label>
+                    <input type="practice" class="input-container" id="practice" placeholder="Напишите">
+    
+                    <label for="review" class="input-header">Отзыв</label>
+                    <textarea type="review" class="input-container-rev input-container" id="review" placeholder="Напишите"></textarea>
+                    
+                    <div class="custom-file-upload">
+                        <button type="button" class="practiceBtn" id="fileBtn">Выберите фото</button>
+                        <input type="file" id="reviewImages" multiple accept="image/*">
+                    </div>
+                    <div class="image-preview" id="imagePreview"></div>
+        
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch mt-5">
+                    <button class="more reg">Отправить</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+        
+
+
+        </div>
+        <div style="justify-content: center; display: flex;">
+            <button class="btn-more btn-link" id="loadMore">Больше отзывов</button>    
+        </div>
+        
+      </section>
+
+
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <!-- slick-carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+  <script src="./src/js/master.js"></script>
+</body>
+</html>

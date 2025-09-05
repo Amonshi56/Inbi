@@ -221,3 +221,4 @@ document.querySelectorAll('.filter-group').forEach(group => {
     buildFilters();
     render();
   });
+
