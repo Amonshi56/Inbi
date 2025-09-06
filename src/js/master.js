@@ -20,7 +20,7 @@ document.getElementById('nextBtnPr')?.addEventListener('click', () => mySwiperPr
 });
 
 const text = document.querySelector('.lead');
-const btn = document.querySelector('.btn-more');
+const btn = document.querySelector('.master-more');
 
 btn.addEventListener('click', () => {
   text.classList.toggle('expanded');

@@ -1,4 +1,127 @@
-document.querySelectorAll('.filter-group').forEach(group => {
+// Обработка видео превью
+document.querySelectorAll('.practice-video-card').forEach((card, index) => {
+    const video = card.querySelector('video');
+    const poster = card.querySelector('.video-poster');
+    const statusEl = card.querySelector('.video-status');
+    const loadingIndicator = card.querySelector('.loading-indicator');
+    const playOverlay = card.querySelector('.play-overlay');
+    
+    if (video) {
+        console.log(`Initializing video ${index + 1}:`, video.src);
+        
+        // Показываем индикатор загрузки
+        if (loadingIndicator) loadingIndicator.style.display = 'block';
+        
+        // Обработчики событий загрузки видео
+        video.addEventListener('loadstart', function() {
+            console.log(`Video ${index + 1} started loading:`, video.src);
+            if (statusEl) statusEl.textContent = 'Загрузка...';
+        });
+  
+        video.addEventListener('loadedmetadata', function() {
+            console.log(`Video ${index + 1} metadata loaded:`, video.src);
+            if (loadingIndicator) loadingIndicator.style.display = 'none';
+            card.classList.add('video-loaded');
+            if (statusEl) statusEl.textContent = 'Наведите для просмотра';
+        });
+  
+        video.addEventListener('canplaythrough', function() {
+            console.log(`Video ${index + 1} can play through:`, video.src);
+            if (statusEl) statusEl.textContent = 'Кликните для полного просмотра';
+        });
+  
+        video.addEventListener('error', function(e) {
+            console.error(`Video ${index + 1} failed to load:`, video.src, e);
+            if (loadingIndicator) loadingIndicator.style.display = 'none';
+            if (poster) {
+                poster.style.display = 'flex';
+                const titleEl = poster.querySelector('.video-title');
+                if (titleEl) titleEl.textContent = 'Видео недоступно';
+            }
+            if (statusEl) statusEl.textContent = 'Ошибка загрузки';
+        });
+  
+        // Проверяем, поддерживает ли устройство touch
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        if (isTouchDevice) {
+            // Для мобильных устройств - используем touchstart/touchend
+            let touchTimer;
+            
+            card.addEventListener('touchstart', function(e) {
+                if (video.readyState >= 3) {
+                    console.log(`Starting mobile preview for video ${index + 1}`);
+                    card.classList.add('playing');
+                    video.currentTime = 0;
+                    video.volume = 0.3; // Устанавливаем громкость на 30%
+                    
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log(`Video ${index + 1} mobile preview started`);
+                        }).catch(e => {
+                            console.log(`Video ${index + 1} mobile preview blocked:`, e);
+                            if (playOverlay) playOverlay.style.opacity = '1';
+                        });
+                    }
+                    
+                    // Автоматически останавливаем через 3 секунды
+                    touchTimer = setTimeout(() => {
+                        card.classList.remove('playing');
+                        video.pause();
+                        video.currentTime = 0;
+                        if (playOverlay) playOverlay.style.opacity = '0';
+                    }, 3000);
+                }
+            });
+            
+            card.addEventListener('touchend', function() {
+                // Очищаем таймер если пользователь убрал палец
+                clearTimeout(touchTimer);
+                setTimeout(() => {
+                    card.classList.remove('playing');
+                    video.pause();
+                    video.currentTime = 0;
+                    if (playOverlay) playOverlay.style.opacity = '0';
+                }, 500); // Даем небольшую задержку
+            });
+            
+        } else {
+            // Для десктопа - используем mouse события
+            card.addEventListener('mouseenter', function() {
+                if (video.readyState >= 3) { // HAVE_FUTURE_DATA
+                    console.log(`Starting preview for video ${index + 1}`);
+                    card.classList.add('playing');
+                    video.currentTime = 0;
+                    video.volume = 0.3; // Устанавливаем громкость на 30%
+                    
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log(`Video ${index + 1} preview started`);
+                        }).catch(e => {
+                            console.log(`Video ${index + 1} preview blocked:`, e);
+                            if (playOverlay) playOverlay.style.opacity = '1';
+                        });
+                    }
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                card.classList.remove('playing');
+                video.pause();
+                video.currentTime = 0;
+                if (playOverlay) playOverlay.style.opacity = '0';
+            });
+        }
+  
+        // Принудительная загрузка видео
+        video.load();
+    }
+  });
+
+
+  document.querySelectorAll('.filter-group').forEach(group => {
     const label = group.querySelector('.filter-label');
     label.addEventListener('click', () => {
       group.classList.toggle('open');
@@ -12,7 +135,6 @@ document.querySelectorAll('.filter-group').forEach(group => {
     });
   });
 
-  
  
   
   document.addEventListener("DOMContentLoaded", () => {
@@ -44,10 +166,10 @@ document.querySelectorAll('.filter-group').forEach(group => {
     // Собираем уникальные города и практики
     function buildFilters() {
       const cityFilters = document.getElementById("cityFilters");
-      const practiceFilters = document.getElementById("practiceFilters");
+    //   const practiceFilters = document.getElementById("practiceFilters");
 
       const cities = [...new Set(allMasters.map(m => m.city))];
-      const practices = [...new Set(allMasters.flatMap(m => m.practices))];
+    //   const practices = [...new Set(allMasters.flatMap(m => m.practices))];
 
       cities.forEach(city => {
         const div = document.createElement("div");
@@ -59,15 +181,15 @@ document.querySelectorAll('.filter-group').forEach(group => {
         cityFilters.appendChild(div);
       });
 
-      practices.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "filter-checkbox-item";
-        div.innerHTML = `
-          <input type="checkbox" class="filter-checkbox" value="${p}" id="practice_${p}">
-          <label for="practice_${p}">${p}</label>
-        `;
-        practiceFilters.appendChild(div);
-      });
+    //   practices.forEach(p => {
+    //     const div = document.createElement("div");
+    //     div.className = "filter-checkbox-item";
+    //     div.innerHTML = `
+    //       <input type="checkbox" class="filter-checkbox" value="${p}" id="practice_${p}">
+    //       <label for="practice_${p}">${p}</label>
+    //     `;
+    //     practiceFilters.appendChild(div);
+    //   });
 
       document.querySelectorAll(".filter-checkbox").forEach(cb => {
         cb.addEventListener("change", applyFilters);
@@ -134,7 +256,7 @@ document.querySelectorAll('.filter-group').forEach(group => {
       pageItems.forEach(master => {
         mastersGrid.innerHTML += `
           <div class="master-card-div">
-            <div class="master-photo-div">
+            <div class="master-photo-div-round">
               <img src="${master.photo}" alt="" class="master-photo">
             </div>
             <div>
@@ -147,7 +269,7 @@ document.querySelectorAll('.filter-group').forEach(group => {
         `;
       });
 
-      renderPagination(itemsPerPage);
+    //   renderPagination(itemsPerPage);
     }
 
     // Рендер пагинации
@@ -219,7 +341,7 @@ document.querySelectorAll('.filter-group').forEach(group => {
     
 
     window.addEventListener("resize", render);
-
+    applyFilters(); 
     buildFilters();
     render();
   });

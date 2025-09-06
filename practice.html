@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/reviews.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <link href="./src/styles/master.css" rel="stylesheet" />
+  <link href="./src/styles/practice.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+
+  <!-- practice-info  -->
+   <section class="section_standart" style="margin-top: 300px;">
+
+        <div class="master-container">
+          <div class="master-div">
+            <div class="master-photo-div">
+             <a class="pr-card-video-conteiner mobile-hidd " 
+                data-fancybox="video-gallery"
+                data-src="./src/video/Гульнара_багуа.mp4"
+                data-caption="<h4>Тайци-цигун</h4><p>Энергетические практики для укрепления здоровья</p>">
+                 <div class="practice-video-card">
+                     <video 
+                         src="./src/video/Гульнара_багуа.mp4" 
+                         muted 
+                         preload="metadata"
+                         playsinline
+                         loop>
+                     </video>
+                     <div class="video-poster">
+                         <div class="video-title">Тайци-цигун</div>
+                         <div class="video-status">Загрузка...</div>
+                     </div>
+                     <div class="loading-indicator" style="display: none;"></div>
+                     <div class="play-overlay">
+                         <svg class="play-icon" viewBox="0 0 24 24">
+                             <path d="M8 5v14l11-7z"/>
+                         </svg>
+                     </div>
+                 </div>
+             </a>
+             <button class="btn-more btn-link more-pr" >Подробнее о методе</button>
+             <button class="btn-more btn-link more-pr" >Обучающие материалы</button>
+            </div>
+            <div class="master-info-div">
+              <div>
+                <p class="master-header">Название практики</p>
+              </div>
+              <p class="lead" style="white-space: break-spaces !important; font-size: 16px;">
+                Более 4 тысяч лет назад в Древнем Китае была создана колоссальная по глубине и степени проработки система работы с телом, сознанием и энергией человека. На начальном этапе перед занимающимся стоит задача восстановить правильную работу всех систем тела, нарушенную неправильным образом жизни, болезнями: разблокировка зажимов и спазмов, исправление перекосов, восстановление движения энергии и оздоровление всех систем и органов до оптимально возможного уровня для каждого конкретного человека.
+                На следующем этапа перед человеком открываются возможности Даосской Алхимии – этой древнейшей универсальной комплексной системы различных методик саморазвития, куда входят оздоровительные практики, внутренние практики, боевые практики, женские практики, практики работы с сексуальной энергией и многое другое. Мастера клуба ИНБИ уже более 30 лет преподают весь спектр возможностей даосских практик в 15 филиалах по всему миру.              
+              </p>
+              <button class="btn-more btn-link master-more">
+                Подробнее
+              </button>  
+            </div>
+            
+        </div>
+        <div style="width: 100%;display: block;">
+            
+            <div class="swiper mySwiperPhotoM">
+                <div class="swiper-wrapper">
+                        
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery"  href="./src/images/chom.png">
+                        <img src="./src/images/chom.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide"> 
+                    <a data-fancybox="gallery" href="./src/images/Алх.jpg">
+                        <img src="./src/images/Алх.jpg" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery"  href="./src/images/ИндАлх.png">
+                        <img src="./src/images/ИндАлх.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+            
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="./src/images/chom.png">
+                        <img src="./src/images/chom.png" class="swip-photo-conteiner" alt="Фото 1">
+                    </a>  
+                </div>
+
+                </div>
+            </div>
+
+        </div> 
+   </section>
+
+   <!-- events -->
+    <section class="section_standart">
+        <div class="master-events-container">
+            <p class="practice-head-text">Ближайшие мероприятия</p>
+            <div class="master-events-div">
+
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+
+                
+                <div class="card pr-card h-100 shadow-sm border-0">
+                    <p class="text-data">28 декабря 2025 - 17 января 2026</p>
+                    <h5 class="card-title">4 Курс «Исскуство развития мозга. Интегральные практики»</h5>
+                    <p class="pr-card-text">Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик... Описание курса для развития мозга и интегральных практик...</p>
+                    
+                    <div class="d-flex flex-wrap align-items-start align-content-start gap-2">
+                        <span class="badge online">ОНЛАЙН</span>
+                        <span class="badge btninfo">ГОРОД</span>
+                        <span class="badge btninfo">ВЕДУЩИЙ: ИМЯ ФАМИЛИЯ</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted price">ЦЕНА: <strong class="sum">от 10 000 руб.</strong></span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch">
+                        <button class="btn more">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- practice time-->
+   <section class="section_standart" style="display: flex; flex-direction: column; gap: 72px;">
+    <p class="practice-head-text">Занятия</p>
+    <div class="practice-div">
+        <div class="day-container">
+            <p class="day-head" onclick="toggleDay(this)">ВТ<span><img src="./src/icons/day_dropdown.svg" alt="arrow" class="filter-icon"></span></p>
+            <div class="day-content">
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-container">
+
+            <p class="day-head" onclick="toggleDay(this)">СБ<span><img src="./src/icons/day_dropdown.svg" alt="arrow" class="filter-icon"></span></p>
+            <div class="day-content">
+                <div class="practice-card-body">
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-time">10:30-12:00</p>
+                        <p class="practice-card-header">Название занятия длинное, может содержать три строки</p>
+                    </div>
+                    <div class="practice-card-body-half">
+                        <p class="practice-card-info">Большой зал</p>
+                        <p class="practice-card-info">Имя фамилия</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <!-- masters -->
+   <section class="section_standart">
+    <div class="masters-container">
+        <p class="masters-header">Мастера</p>
+         <!-- Фильтры -->
+         <div class="filter-panel">
+            <div class="filter-row">
+              <div class="filter-group">
+                <label class="filter-label">
+                  Город
+                  <div style="display: flex;">
+                    <span class="filter-counter" id="cityCounter" style="display: none;">0</span>
+                    <img src="./src/icons/drop_closed.svg" alt="arrow" class="filter-icon">
+                  </div>
+                </label>
+                <div class="filter-checkbox-group" id="cityFilters">
+
+                  <!-- Примеры чекбоксов -->
+                  <!-- <div class="filter-checkbox-item">
+                    <input type="checkbox" class="filter-checkbox" id="cityFilters_Москва" value="Москва">
+                    <label class="filter-checkbox-label" for="cityFilters_Москва">Москва</label>
+                  </div> -->
+
+                </div>
+              </div>
+              <div class="filter-group" style="display: none;">
+                <label class="filter-label">
+                  Вид практики
+                  <div style="display: flex;">
+                    <span class="filter-counter" id="practiceCounter" >0</span>
+                    <img src="./src/icons/drop_closed.svg" alt="arrow" class="filter-icon">
+                  </div>
+                </label>
+                <div class="filter-checkbox-group" id="practiceFilters">
+
+                  <!-- Примеры чекбоксов -->
+                  <!-- <div class="filter-checkbox-item" style="display: none;">
+                    <input type="checkbox" class="filter-checkbox" id="practiceFilters_Цигун" value="Цигун" checked >
+                    <label class="filter-checkbox-label" for="practiceFilters_Цигун">Цигун</label>
+                  </div> -->
+
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <!-- Сетка карточек -->
+        <div class="masters-grid" id="mastersGrid">
+          <!-- Пример карточки -->
+          <!-- <div class="master-card-div">
+            <div class="master-photo-div">
+              <img src="./src/images/Алхим.png" alt="" class="master-photo">
+            </div>
+            <div>
+              <p class="master-name" id="first_name">Имя</p>
+              <p class="master-name" id="second_name">Фамилия</p>
+              <p id="city" style="display: none;">Москва</p>
+              <div id="practice-box" style="display: none;">
+                <p>Цигун</p>
+                <p>Багуа</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        
+        <!-- Сообщение об отсутствии результатов -->
+        <div class="no-results hidden" id="noResults">
+            Мастера по данному направлению не найдены
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="pagination" id="pagination">
+        </div>
+    </div>
+  </section>  
+
+    <!-- presentation -->
+
+    <section class="section_standart">
+        <div class="presentation-container">
+            <div>
+                Презентационные материалы
+            </div> 
+        </div>
+    </section>
+
+    <!-- request -->
+      <section class="send-rev-sec" >
+        <div class="send-rev-con" id="grid">
+            <div class="send_rev_form item1" id="requestForm">
+                <p class="registration-card-head">Оставить заявку</p>
+                
+                <form class="input-block" style="animation-delay: 0.2s;">
+                    
+                    <label for="Name" class="input-header">Ваше имя</label>
+                    <input type="text" class="input-container" id="Name" placeholder="Напишите">
+                
+                    <label for="city" class="input-header">Почта</label>
+                    <input type="city" class="input-container" id="city" placeholder="Напишите">
+        
+                    <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch mt-5">
+                    <button class="more reg">Отправить</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="reviews-card-body">
+                <div class="cardTop">
+                    <div class="stars"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"><img src="./src/images/star.png" alt="⭐" class="star"></div>
+                    <h6 class="reviews-text user">Анна Петрова</h6>
+                    <p class="reviews-text master-review-text">Даосские практики - это инструмент на пути развития. За многолетнее соприкосновение с ними произошли существенные изменения на физическом, энергетическом и ментальном планах: улучшение здоровья и самочувствия, чувствование тела, развитие жизненности.</p>
+                </div>
+                <div class="cardBott">
+                    <small class="reviews-text rdate">25.06.25</small>
+                    <button class="btn-more btn-link .loadMoreRew" id="loadMoreRew">Подробнее</button>
+                </div>
+            </div>
+
+        
+
+
+        </div>
+        <div style="justify-content: center; display: flex;">
+            <button class="btn-more btn-link" id="loadMore">Больше отзывов</button>    
+        </div>
+        
+      </section>
+
+    <section class="section_standart" style="margin-bottom: 300px;">
+        <div class="collect-btn-div">
+            <button class="practiceBtn prbtn">Даосские</button>
+            <button class="practiceBtn prbtn">Капоэйра</button>
+            <button class="practiceBtn prbtn">Развитие мозга</button>
+            <button class="practiceBtn prbtn">Развитие творческих способностей</button>
+            <button class="practiceBtn prbtn">Этнические</button>
+            <button class="practiceBtn prbtn">Алхимические</button>
+        </div> 
+    </section>
+
+
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <!-- slick-carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+  <script src="./src/js/master.js"></script>
+  <script src="./src/js/practice.js"></script>
+</body>
+</html>
