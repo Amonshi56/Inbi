@@ -1697,7 +1697,7 @@
     }
 
     .fancybox-content {
-      display: contents;
+      display: contents !important;
     }
   }
 
