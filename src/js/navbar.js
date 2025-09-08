@@ -82,7 +82,7 @@ class InbiNavbar extends HTMLElement {
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="./practices.html" id="practices_btn">Практики</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#events">События</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./poster.html" id="poster_btn">События</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#schedule">Расписание</a></li>
                                 <li class="nav-item"><a class="nav-link" href="./prices.html" id="pricing">Цены</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#rental">Аренда залов</a></li>
