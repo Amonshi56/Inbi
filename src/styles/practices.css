@@ -196,7 +196,8 @@
     align-self: center;
     width: 100%;
   }
-  
+
+
     @media (max-width: 767px) {
     
         .master-events-div {

@@ -373,6 +373,10 @@
     line-height: normal;
   }
 
+  .telegramm {
+    width: 100%;
+  }
+
 @media (max-width: 767px) {
     .section_standart {
         margin: 72px 40px;

@@ -1351,6 +1351,10 @@
       margin: 72px 40px;
     }
 
+    .phone-hidd {
+      display: none;
+    }
+
     .hero-section {
       background-attachment: scroll;
     }
