@@ -216,7 +216,7 @@
 
 .day-head {
     display: flex;
-    padding: 12px 18px;
+    padding: 9px 18px;
     align-items: center;
     border-radius: 36px;
     border: 1px solid #C99F90;
@@ -544,7 +544,7 @@
     .day-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: all 0.3s ease;
         padding: 0px 20px;
 
     }
@@ -621,7 +621,7 @@
     .day-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: all 0.3s ease;
         padding: 0px 20px;
 
     }
