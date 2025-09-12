@@ -1,0 +1,617 @@
+.rent-space-div {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: 100%;
+}
+
+.offer-rent {
+    background:  #F6E2DB !important; 
+    margin-left: 0% !important; 
+    margin-right: 0% !important; 
+    padding: 144px 72px  !important; 
+}
+
+.rent-space-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.rent-space-info-header {
+    color: #000;
+    font-family: Ledger;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rent-space-info-text {
+    color: #000;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    white-space: pre-line;
+}
+
+.rent-space-spaces-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    padding: 0 24px;
+    align-items: flex-start;
+}
+
+.border-r {
+    border-left: 1px solid  #909785;
+}
+
+.space-name-head {
+    color: var(--Text-primary, #000);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.space-info-size {
+    color: var(--Text-Secondary, #565351);
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.rent-space-img-div {
+    overflow: hidden;
+    border-radius: 16px;
+    transform: translateX(150px);
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+
+.rent_img_entr {
+    object-fit: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+.offer-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.offer-header {
+    color: var(--Global-Black, #000);
+    text-align: center;
+    font-family: Ledger;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.offer-text {
+    color: var(--Global-Black, #000);
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    white-space: pre-line;
+    text-align: center;
+}
+
+.offer-cards-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 18px;
+    width: 100%;
+    padding: 0px 100px;
+}
+
+.offer-card-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 36px;
+    padding: 32px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 11.8px 0 #CECBC9;
+    background: white;
+    min-height: 266px;
+    min-width: 266px;
+}
+
+.offer-card-header {
+    color: var(--Text-primary, #000);
+    text-align: center;
+    font-family: Ledger;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: center;
+}
+
+.halls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    width: 100%;
+}
+
+.halls-info-div {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: 100%;
+    padding: 0px 190px;
+}
+
+.halls-info-l-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.halls-header {
+    color: #000;
+    text-align: center;
+    font-family: Ledger;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.halls-div {
+    gap: 18px;
+    padding: 18px;
+}
+
+
+.mySwiperPhotoMR .swip-photo-conteiner{
+    height: 100%;
+    background: transparent;
+}
+
+.mySwiperPhotoMR .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.mySwiperPhotoMRS .swip-photo-conteiner{
+    height: 100%;
+    background: transparent;
+}
+
+.mySwiperPhotoMRS .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    display: flex !important;
+    color: #89503c !important;
+}
+
+.equipment-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 26px;     
+}
+
+.equipment-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.equipment-card-header {
+    color: var(--Text-primary, #000);
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.equipment-card-text {
+    color:  #565351;
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    white-space: pre-line;
+}
+
+.design-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 72px;
+}
+
+.design-header {
+    color: #000;
+    text-align: center;
+    font-family: Ledger;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.design-text {
+    color: #000;
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    width: 730px;
+    align-self: center;
+}
+
+.design-swip-div {
+    display: flex;
+    width: 100%;
+}
+
+.design-photo-img {
+    display: flex;
+    height: 416px;
+    max-width: 548px;
+    padding: 21px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.event-mbtns {
+    align-content: center;
+}
+
+.telegramm {
+    align-self: center;
+    font-size: 18px;
+}
+
+.telegramm:hover {
+    fill: #89503c;
+    color: #89503c;
+}
+
+.logo-text {
+    color: var(--Global-white, #FFF);
+    text-align: center;
+    font-family: Ledger;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-self: center;
+}
+
+.logo-img {
+    display: flex;
+    width: 546px;
+    height: 148px;
+    padding: 0 0.53px;
+    justify-self: center;
+    align-self: center;
+}
+
+.logo-section {
+    flex-direction: column;
+    background-image: url("../images/rent_back.png");
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 72px 0px;
+    height: 872px;
+    align-items: center;
+    gap: 72px;
+    justify-content: center;
+}
+
+.rent-price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.rent-cards-div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+    align-content: center;
+}
+
+.rent-price-card-body {
+    display: flex;
+    width: 735px;
+    padding: 32px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+    border-radius: 12px;
+    box-shadow: 0 4px 11.8px 0 var(--Global-Gray-Gray-30, #CECBC9);
+}
+
+.rent-pice-card-sub-div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+.more {
+    width: 350px;
+    justify-self: center;
+    align-self: center;
+}
+
+.contacts-section {
+    flex-direction: column;
+    background-image: url("../images/rent_contact_back.png");
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 72px 0px;
+    height: 872px;
+    align-items: center;
+    gap: 18px;
+    justify-content: flex-start;
+    padding-top: 65px;
+}
+
+.contact-text {
+    color: var(--Global-white, #FFF);
+    text-align: center;
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.input-container.error {
+    border: 1px solid red;
+  }
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 24px 0;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #727967;
+    flex-shrink: 0;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #5A6C7D;
+    line-height: 1.5;
+}
+
+.checkbox-label a {
+    color: #727967;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.registration-card-body {
+    min-height: 774px;
+}
+
+.registration-photo {
+    background-image: url("../images/kukai.jpg");
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 72px 0px;
+    height: 774px !important;
+    border-radius: 19px;
+    width: 100%;
+    background-position: -100px;
+    transform: translateX(-100px);
+}
+
+
+@media (max-width: 767px) {
+    .rent-space-div {
+        flex-direction: column;
+    }
+
+    .rent-space-img-div {
+        width: 100%;
+        height: 474px;
+        transform: translateX(0px);
+        margin-top: 32px;
+        
+    }
+    
+    .mob-rent-space-div{
+        flex-direction: row !important;
+    }
+
+    .border-r-m {
+        border-left: 1px solid  #909785;
+    }
+
+    .rent_img_entr {
+        object-position: -25px;
+
+    }
+
+    .rent-space-info-header {
+        text-align: center;
+    }
+
+    .offer-cards-div {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }    
+
+    .offer-rent {
+        padding: 100px 32px !important;
+    }
+
+    .swiper {
+        height: 200px !important;
+    }
+    
+    .halls-info-div {
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    .equipment-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .design-swip-div {
+        flex-direction: column;
+        
+    }
+
+    .gallery-design {
+        justify-content: center;
+        display: flex;
+        height: 200px;
+    }
+
+    .design-photo-img {
+        height: 165px;
+        padding: 0px;
+
+    }
+
+    .event-mbtns {
+        justify-content: center;
+        align-content: center;
+    }
+
+    #nextBtn, #prevBtn1 {
+        margin: 5px !important;
+        padding: 5px !important;
+        width: 40%;
+    }
+
+    .logo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .design-text {
+        width: auto;
+    }
+
+    .rent-cards-div {
+        flex-direction: column;
+    }
+
+    .rent-price-card-body {
+        width: 100%;
+    }
+
+    .rent-pice-card-sub-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rent-space-spaces-info {
+        padding: 18px 5px;
+    }
+}    
+
+
+@media (min-width: 768px) and (max-width: 1499px) {
+    .rent-space-img-div {
+        transform: translateX(0px);
+    }
+
+    .rent_img_entr {
+        object-position: -115px;
+    }
+
+    .offer-cards-div {
+        display: flex;
+        flex-direction: column;
+    }    
+
+
+    .swiper {
+        height: 500px !important;
+    }
+    
+    .halls-info-div {
+        padding: 0px;
+    }
+
+    .equipment-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .gallery-settings {
+        justify-content: center;
+        display: flex;
+    }
+
+    .logo-section {
+        background-position: right;
+    }
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <link href="./src/styles/rent.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    #rent_btn {
+color: rgba(114, 121, 103, 1) !important;
+}
+</style>
+
+
+</head>
+<body>
+    <!-- Navigation -->
+    <inbi-navbar></inbi-navbar>
+
+    <!-- Hero Section   style="height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://c.animaapp.com/mehkbowzCV7nvE/img/chom-01-1.png') center/cover; -->
+    <section class="hero-section d-flex align-items-end justify-content-end">
+      <div class="container-fluid hero-conteiner text-center text-white">
+      </div>
+    </section>
+  
+    <!-- space  -->
+     <section class="section_standart">
+        <div class="rent-space-div">
+            <div class="rent-space-info-div">
+                <p class="rent-space-info-header">Пространство клуба ИНБИ</p>
+                <p class="rent-space-info-text">В самом центре суетной Москвывас ждёт гармоничное пространство, реальное место силы, куда стоит пригласить своих учеников и единомышленников.</p>
+                <div class="rent-space-div mob-rent-space-div">
+                    <div class="rent-space-spaces-info border-r border-r-m">
+                        <p class="space-name-head">Большой зал</p>
+                        <p class="space-info-size">300 м2</p>
+                    </div>
+                    <div class="rent-space-spaces-info border-r">
+                        <p class="space-name-head">Малый зал</p>
+                        <p class="space-info-size">60 м2</p>
+                    </div>
+                </div>
+                <p class="rent-space-info-text">Наше пространство открыто для проведения практик, мастер-классов, семинаров, лекций, конференций, фестивалей, спортивно-оздоровительных мероприятий как на регулярной, так и на разовой основе.</p>
+            </div>
+            <div class="rent-space-img-div">
+                <img src="./src/images/rent_entr.png" class="rent_img_entr">
+            </div>
+        </div>
+     </section>
+
+    <!-- What we offer  -->
+     <section class="section_standart offer-rent" >
+        <div class="offer-container">
+            <p class="offer-header">Что мы предлагаем</p>
+            <p class="offer-text">Живое, наполняющее, позитивное пространство, оно каждому помогает воспринять новые уровни себя.</p>
+            <div class="offer-cards-div">
+                <div class="offer-card-body">
+                    <p class="offer-card-header">Удобное расположение</p>
+                    <p class="offer-text">12 мин. от метро: Новослободская, Менделеевская, Достоевская</p>
+                </div>
+
+                <div class="offer-card-body">
+                    <p class="offer-card-header">Залы</p>
+                    <p class="offer-text">Общее описание залов</p>
+                </div>
+
+                <div class="offer-card-body">
+                    <p class="offer-card-header">Комфорт для занятий</p>
+                    <p class="offer-text">шкафчики для личных вещей, душ, санузел</p>
+                </div>
+
+                <div class="offer-card-body">
+                    <p class="offer-card-header">Информационная и рекламная поддержка</p>
+                    <p class="offer-text">По партнёрским ценам</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Halls -->
+     <section class="section_standart">
+        <div class="halls-container">
+            <p class="halls-header">Залы</p>
+            <div class="swiper-cont-halls">
+                
+                <div class="swiper mySwiperPhotoMR">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-wrapper">
+                            
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings"  href="./src/images/big_hall.png">
+                                <img src="./src/images/big_hall.png" class="swip-photo-conteiner" alt="Фото 1">
+                            </a>  
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings"  href="./src/images/small_hall.png">
+                                <img src="./src/images/small_hall.png" class="swip-photo-conteiner" alt="Фото 1">
+                            </a>  
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next">  </div>
+                </div>
+        
+            </div>
+            <div class="halls-info-div">
+                <div class="halls-info-l-div">
+                    <p class="rent-space-info-header">Большой зал</p>
+                    <p class="rent-space-info-text">Просторный зал для ваших мероприятий, подходит как для проведения лекций, так и для активной практики (или другой аналогичный текст)</p>
+                </div>
+                <div class="halls-info-l-div" >
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head">300 м2</p>
+                        <p class="space-info-size">Площадь</p>
+                    </div>
+
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head">до 200 человек</p>
+                        <p class="space-info-size">для лекций</p>
+                    </div>
+
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head"> до 100 человек</p>
+                        <p class="space-info-size">для активной практики</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-cont-halls">   
+                <div class="swiper mySwiperPhotoMRS">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-wrapper">
+                            
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery"  href="./src/images/big_hall.png">
+                                <img src="./src/images/big_hall.png" class="swip-photo-conteiner" alt="Фото 1">
+                            </a>  
+                        </div>
+                
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery"  href="./src/images/small_hall.png">
+                                <img src="./src/images/small_hall.png" class="swip-photo-conteiner" alt="Фото 1">
+                            </a>  
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="halls-info-div">
+                <div class="halls-info-l-div">
+                    <p class="rent-space-info-header">Малый зал</p>
+                    <p class="rent-space-info-text">Небольшой, но уютный зал, оснощенный зеркалами и теплым освещением.( или другой аналогичный текст) </p>
+                </div>
+                <div class="halls-info-l-div" >
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head">60 м2</p>
+                        <p class="space-info-size">Площадь</p>
+                    </div>
+
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head">до 30 человек</p>
+                        <p class="space-info-size">для лекций</p>
+                    </div>
+
+                    <div class="rent-space-spaces-info border-r border-r-m halls-div">
+                        <p class="space-name-head"> до 20 человек</p>
+                        <p class="space-info-size">для активной практики</p>
+                    </div>
+                </div>
+            </div>    
+            </div>
+
+        </div>
+     </section> 
+
+     <!-- equipment   -->
+     <section class="section_standart offer-rent">
+        <div class="equipment-container">
+            <div class="equipment-card-body">
+                <img src="./src/icons/razdevalki.svg" alt="">
+                <p class="equipment-card-header">РАЗДЕВАЛКИ</p>
+                <p class="equipment-card-text">Две раздевалки с индивидуальными шкафчиками,
+                    две комнаты для мастеров</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/inventarj.svg" alt="">
+                <p class="equipment-card-header">ИНВЕНТАРЬ</p>
+                <p class="equipment-card-text">Подушки для медитации, коврики, татами</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/zvuk.svg" alt="">
+                <p class="equipment-card-header">ЗВУК</p>
+                <p class="equipment-card-text">4 активных колонки мощностью 1000 Вт, микшерный пульт</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/equip.svg" alt="">
+                <p class="equipment-card-header">ОБОРУДОВАНИЕ</p>
+                <p class="equipment-card-text">Проектор с разрешением Full HD 1080 подходит для презентаций даже в хорошо освещенных залах, возможность подключения без ПК, экран, флипчарт, кулеры, бойлер</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/mebelj.svg" alt="">
+                <p class="equipment-card-header">МЕБЕЛЬ</p>
+                <p class="equipment-card-text">Столы 18 шт., стулья 50 шт., скамейки на 2 чел. 17 шт.</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/internet.svg" alt="">
+                <p class="equipment-card-header">ИНТЕРНЕТ</p>
+                <p class="equipment-card-text">Wi-Fi с возможностью онлайн-трансляции</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/lockat.svg" alt="">
+                <p class="equipment-card-header">РАСПОЛОЖЕНИЕ</p>
+                <p class="equipment-card-text">10 мин. пешком от м. Новослободская
+
+                    парковка № 3216</p>
+            </div>
+
+            <div class="equipment-card-body">
+                <img src="./src/icons/ne-kuryat.svg" alt="">
+                <p class="equipment-card-header">У НАС НЕ КУРЯТ</p>
+                <p class="equipment-card-text">В пространстве клуба и на прилегающей территории запрещено курить!</p>
+            </div>
+
+        </div>
+     </section>
+     
+     <!-- club design -->
+     <section class="section_standart">
+        <div class="design-container">
+            <p class="design-header">Оформление клуба</p>
+            <p class="design-text">В оформлении клуба отражены культурные матрицы различных мировых цивилизаций, чьё наследие мы с благодарностью изучаем сейчас.</p>
+            <div class="design-swip-div">
+                <div style="display: flex; align-items: center;" class="event-mobile-div">       
+                      <button id="prevBtn" class="pr-btn-hmoobile">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1165_3505)">
+                        <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1165_3505">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </button>
+                </div>  
+                <div class="swiper mySwiper" style="padding: 10px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings gallery-design "  href="./src/images/big_hall.png">
+                                <img src="src/images/big_hall.png" class="design-photo-img">
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings gallery-design "  href="./src/images/big_hall.png">
+                                <img src="src/images/small_hall.png" alt="" class="design-photo-img">
+                            </a>    
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings gallery-design "  href="src/images/masters_bott.png">
+                                <img src="src/images/masters_bott.png" alt="" class="design-photo-img">
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a data-fancybox="gallery" class="gallery-settings gallery-design "  href="src/images/masters_founder.jp">
+                                <img src="src/images/masters_founder.jpg" alt="" class="design-photo-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-mbtns">
+                    <button id="prevBtn1" class="events-mobile-Hprbtn">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1165_3505)">
+                      <path d="M14.2929 5.79289C14.6834 5.40237 15.3164 5.40237 15.707 5.79289C16.0975 6.18342 16.0975 6.81643 15.707 7.20696L10.414 12.4999L15.707 17.7929L15.7753 17.8691C16.0957 18.2618 16.0731 18.8408 15.707 19.207C15.3408 19.5731 14.7618 19.5957 14.3691 19.2753L14.2929 19.207L8.29289 13.207C7.90237 12.8164 7.90237 12.1834 8.29289 11.7929L14.2929 5.79289Z"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_1165_3505">
+                      <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                    </button>  
+                    <button id="nextBtn">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29289 5.79289C8.68342 5.40237 9.31643 5.40237 9.70696 5.79289L15.707 11.7929C16.0975 12.1834 16.0975 12.8164 15.707 13.207L9.70696 19.207C9.31643 19.5975 8.68342 19.5975 8.29289 19.207C7.90237 18.8164 7.90237 18.1834 8.29289 17.7929L13.5859 12.4999L8.29289 7.20696C7.90237 6.81643 7.90237 6.18342 8.29289 5.79289Z" />
+                        </svg>
+                    </button>
+                </div> 
+            </div>
+            <button class="practiceBtn telegramm">
+                Больше фото 
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1214_701)">
+                      <path d="M18.9395 7.93934C19.5252 7.35355 20.4748 7.35355 21.0605 7.93934L30.0605 16.9393C30.6463 17.5251 30.6463 18.4746 30.0605 19.0604L21.0605 28.0604C20.4748 28.6462 19.5252 28.6462 18.9395 28.0604C18.3537 27.4746 18.3537 26.5251 18.9395 25.9393L25.3789 19.4999H8C7.17157 19.4999 6.5 18.8283 6.5 17.9999C6.5 17.1715 7.17157 16.4999 8 16.4999H25.3789L18.9395 10.0604L18.8369 9.94618C18.3564 9.35702 18.3903 8.48851 18.9395 7.93934Z" 
+                            fill="currentColor"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1214_701">
+                        <rect width="36" height="36" fill="white" transform="translate(0.5)"/>
+                      </clipPath>
+                    </defs>
+                </svg>                 
+            </button>
+        </div>
+     </section>
+
+     <!-- inbi -->
+     <section class="section_standart logo-section">
+        <img src="src/images/logo_w.png" class="logo-img">
+        <p class="logo-text">Гармоничное пространство,<br>реальное место силы</p>
+     </section> 
+
+     <!-- price -->
+     <section class="section_standart">
+        <div class="rent-price-container">
+            <p class="design-header" style="padding-bottom: 20px;">Стоимость</p>
+            <p class="design-text">В оформлении клуба отражены культурные матрицы<br>различных мировых цивилизаций, чьё наследие мы с<br> благодарностью изучаем сейчас.</p>
+            <button class="btn more">Прайс-лист: базовые тарифы на аренду</button>
+            <div class="rent-cards-div">
+                <div class="rent-price-card-body">
+                    <p class="offer-card-header">Большой зал</p>
+                    <div class="rent-pice-card-sub-div">
+                        <div class="rent-space-spaces-info border-r border-r-m">
+                            <p class="space-name-head">От 7 000 до 15 000 руб</p>
+                            <p class="space-info-size">за 1 час аренды</p>
+                        </div>
+                        <div class="rent-space-spaces-info border-r">
+                            <p class="space-name-head">300 м2</p>
+                            <p class="space-info-size">Площадь</p>
+                        </div>
+                    </div>    
+                    <p class="equipment-card-text">Стоимость зависит от дня недели к количества участников группы.<br>Индивидуальные скидки - при общем времени аренда от 10 часов (2-3 дня) и более.</p>
+                </div>
+                <div class="rent-price-card-body">
+                    <p class="offer-card-header">Малый зал</p>
+                    <div class="rent-pice-card-sub-div">
+                        <div class="rent-space-spaces-info border-r border-r-m">
+                            <p class="space-name-head">От 1 800 до 4 000  руб.</p>
+                            <p class="space-info-size">за 1 час аренды</p>
+                        </div>
+                        <div class="rent-space-spaces-info border-r">
+                            <p class="space-name-head">60 м2</p>
+                            <p class="space-info-size">Площадь</p>
+                        </div>
+                    </div>    
+                    <p class="equipment-card-text">Стоимость зависит от дня недели к количества участников группы.<br>Минимальное время аренды 4 часа.<br>Индивидуальные скидки - при общем времени аренда от 10 часов (2-3 дня) и более.<br>Сидки в будние дни в дневное время при аренде под индивидуальные занятия!</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- contacts -->
+     <section class="section_standart contacts-section">
+        <p class="logo-text">Контакты</p>
+        <p class="contact-text">Москва<br>
+        м. Новослободская / Менделеевская / Достоевская<br>
+        пл. Борьбы, д. 13а, стр. 1, Клуб ИНБИ<br>
+        +7 (495) 684-44-20<br>
+        +7 (495) 684-41-17<br>
+        inbiclub@inbi.ru
+        </p>
+        <p class="contact-text">Время работы офиса:<br>
+            ПН—ПТ 10:00—21:00<br>
+            СБ, ВС 09:00—19:00<br>
+        </p>
+        <p class="contact-text">Руководитель: Гульнара Халиуллина
+        </p>
+     </section> 
+
+     <!-- reserve -->
+     <section id="contact" class="registration-sector" style="padding: 20px 20px 200px 20px;">
+        <div class="registration-container mobile-hidd">
+            <div class="registration-photo mobile-hidd" style="animation-delay: 0.4s;"></div>
+            </div>
+
+            <div class="registration-card-body">
+              <p class="registration-card-head">Забронировать зал</p>
+              
+              <form class="input-block" id="bookingForm" style="animation-delay: 0.2s;">
+                
+                <label for="fullName" class="input-header">Ваше полное имя</label>
+                <input type="text" class="input-container" id="fullName" placeholder="Напишите">
+              
+                <label for="email" class="input-header">Ваш Email</label>
+                <input type="email" class="input-container" id="email" placeholder="Напишите">
+              
+                <label for="phone" class="input-header">Ваш телефон</label>
+                <input type="tel" class="input-container" id="phone" placeholder="Напишите">
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree" name="dataConsent" required="">
+                    <label class="checkbox-label" for="dataConsent">
+                      Соглашаюсь на обработку персональных данных в соответствии с 
+                      <a href="#" target="_blank">политикой конфиденциальности</a>
+                    </label>
+                  </div>
+    
+                <div class="d-flex flex-column justify-content-center align-items-end gap-3 align-self-stretch mt-5">
+                  <button class="btn more reg">Оставить заявку</button>
+                </div>
+                
+              </form>
+            </div>
+            
+
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <inbi-footer></inbi-footer>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fancybox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  
+  <!-- Font Awesome -->
+  <!-- <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script> -->
+  <!-- slick-carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+  <script src="./src/js/rent.js"></script>
+</body>
+</html>
