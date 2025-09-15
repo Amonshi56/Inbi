@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ИНБИ - Клуб этнических практик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ledger:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="./src/styles/main.css" rel="stylesheet" />
+  <link href="./src/styles/footer.css" rel="stylesheet" />
+  <link href="./src/styles/navbar.css" rel="stylesheet" />
+  <link href="./src/styles/join.css" rel="stylesheet" />
+  <!-- Slick-carousel -->
+
+</head>
+<body>
+  <!-- Navigation -->
+  <inbi-navbar></inbi-navbar>
+
+  <div class="section_standart" style="margin-top: 200px; flex-direction: column; gap: 72px;">
+    <div class="header">
+        <h1>Заявка на вступление в члены клуба</h1>
+        <p>INBI WORLD</p>
+    </div>
+
+    <div class="form-container">
+        <form id="membershipForm">
+            <!-- Ваши данные -->
+            <div class="section">
+
+                <h3 class="section-title">Ваши данные</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastName">Фамилия</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message">Пожалуйста, введите фамилию</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">Отчество</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="middleName">Имя</label>
+                        <input type="text" id="middleName" name="middleName" required>
+                        <div class="error-message">Пожалуйста, введите имя</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Дата рождения</label>
+                        <input type="text" id="birthDate" name="birthDate" required>
+                        <div class="error-message">Пожалуйста, укажите дату рождения</div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="fullName">Имя и Фамилия латинскими буквами</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <div class="error-message">Пожалуйста, введите имя и фамилию латинскими буквами</div>
+                </div>
+            </div>
+
+            <!-- Местоположение -->
+            <div class="section">
+                <h3 class="section-title">Местоположение</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Страна</label>
+                        <input type="text" id="country" name="country" required>
+                        <div class="error-message">Пожалуйста, укажите страну</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Город</label>
+                        <input type="text" id="city" name="city" required>
+                        <div class="error-message">Пожалуйста, укажите город</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контактные данные -->
+            <div class="section">
+                <h3 class="section-title">Контактные данные</h3>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error-message">Пожалуйста, введите номер телефона</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message">Пожалуйста, введите корректный email адрес</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telegram">Ник в Telegram (%, что после значка @)</label>
+                    <input type="text" id="telegram" name="telegram">
+                    <div class="error-message">Введите ник без символа @</div>
+                </div>
+            </div>
+
+            <!-- Вид карты -->
+            <div class="section">
+                <h3 class="section-title">Вид карты</h3>
+                
+                <div class="card-section">
+                    <div class="card-options">
+                        <div class="card-btn-desc-div">
+                            <button class="card-option_btn" data-value="standard">Общеклубная</button>
+                            <p class="border-text" style="padding-top: 19px !important;">для тех, кто посещает занятия по разным направлениям клуба INBI</p>
+                        </div>
+                        <div class="card-btn-desc-div">
+                            <button class="card-option_btn" data-value="premium">Алхимик</button>
+                            <p class="border-text">для тех, кто выбрал в качестве основного даосское направление. При наличии 2 и выше уровней дает возможность посещать углубленные мероприятия по даосскому направлению.</p>
+                        </div>
+                    </div>
+                    <input type="hidden" id="cardType" name="cardType" required>
+                    <div class="error-message">Пожалуйста, выберите тип карты</div>
+                    
+                    <a href="" class="tarif">членская программа и трифы INBI World</a>
+                </div>
+            </div>
+
+            <!-- Согласие -->
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="agreement1" name="agreement1" required>
+                    <label for="agreement1" >С членской программой и тарифами клуба ознакомлен. Прошу выдать мне клубную карту INBI World.</label>
+                    <div class="error-message">Необходимо согласиться с условиями</div>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="agreement2" name="agreement2" required>
+                    <label for="agreement2" >Согласен на обработку персональных данных в соответствии и Политикой конфиденциальности.</label>
+                    <div class="error-message">Необходимо согласиться с условиями</div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="btn more btn-secondary" id="cancelBtn">Отменить</button>
+                <button type="submit" class="btn more" id="submitBtn">Отправить</button>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+            </div>
+        </form>
+    </div>
+</div>
+
+  <!-- Footer -->
+  <inbi-footer></inbi-footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
+  <script src="./src/js/join.js"></script>
+</body>
+</html>

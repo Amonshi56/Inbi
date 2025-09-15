@@ -468,6 +468,10 @@
     transform: translateX(-100px);
 }
 
+.rent-ico-size {
+    width: 113.9px;
+    height: 113.9px;
+}
 
 @media (max-width: 767px) {
     .rent-space-div {

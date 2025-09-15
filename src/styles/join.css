@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+}
+
+.header h1 {
+    color: #000;
+    font-family: Ledger;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header p {
+    color: #000;
+    font-family: Ledger;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#membershipForm {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    width: 100%;
+}
+
+.section {
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+    padding: 32px 32px 56px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    align-self: stretch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20.9px 0 var(--Global-Gray-Gray-30, #CECBC9);
+}
+
+.section-title {
+    color: #000;
+    font-family: Ledger;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-group {
+    width: 49%;
+}
+
+.form-group.full-width {
+    flex: none;
+    width: 49%;
+}
+
+label {
+    display: block;
+    color: #000;
+
+    /* Dt/p-lange */
+    font-family: "AA Stetica";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 38.4px */
+}
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #909785;
+}
+
+input.error, textarea.error, select.error {
+    border-color: #dc3545;
+}
+
+input.valid, textarea.valid, select.valid {
+    border-color: #727967;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.card-options {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-option_btn {
+    display: flex;
+    width: 25% !important;
+    height: 44px;
+    padding: 4px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 22px;
+    border: 1px solid  #909785;
+    background: white;
+    align-self: center;
+}
+
+.card-option:hover {
+    border-color: #909785;
+    background: #909785;
+    color: white;
+}
+
+.card-option.selected {
+    border-color: #909785;
+    background: #909785;
+    color: white;
+}
+
+.card-option h4 {
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card-option p {
+    font-size: 12px;
+    color: #666;
+}
+
+.checkbox-group {
+    margin: 20px 0;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin-top: 3px;
+}
+
+.checkbox-item label {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background: white !important;
+    color: #727967 !important;
+    border-radius: 4px !important;
+    border: 1px solid  #727967 !important;
+}
+
+.btn-secondary:hover {
+    color: #702C29 !important;
+    border: 1px solid  #702C29 !important;
+}
+
+.btn-primary {
+    background: #4a7c59;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #727967;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.success-message {
+    display: none;
+    background: #d4edda;
+    color: #727967;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tarif {
+    color: var(--Global-Blue-Blue-70, #4B4C6B);
+    font-family: "AA Stetica";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-transform: uppercase;
+}
+
+.card-btn-desc-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 18px;
+    justify-content: center;
+    align-content: center;
+}
+
+.border-text {
+    border-left: 1px solid #727967;
+    padding: 14px;
+    text-align: start;
+    align-self: center !important;
+    width: 100%;
+    align-self: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #727967;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    color: #5A6C7D;
+    line-height: 1.5;
+  }
+
+  .checkbox-label a {
+    color: #727967;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .checkbox-label a:hover {
+    text-decoration: underline;
+  }
+
+  .reg {
+    height: 50px !important;
+    flex: 0;
+  }
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card-options {
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .card-option_btn {
+        width: 100% !important;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100% !important;
+    }
+
+    .section-title {
+        font-size: 32px !important;
+    }
+
+    .card-btn-desc-div{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1499px) {
+
+
+    .tarif {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .border-text {
+        display: flex;
+    }
+
+    .card-option {
+        width: 300px !important;
+    }
+}
