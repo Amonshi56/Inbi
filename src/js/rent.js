@@ -21,13 +21,13 @@ navigation: {
 });  
 
 const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     breakpoints: {
       0: { 
         slidesPerView: 1,
        },
       1024: { slidesPerView: 1 },
-      1025: { slidesPerView: 3 }
+      1500: { slidesPerView: 1 }
     }
 });
  

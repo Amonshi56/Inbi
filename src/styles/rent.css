@@ -290,7 +290,6 @@
 .design-photo-img {
     display: flex;
     height: 416px;
-    max-width: 548px;
     padding: 21px 24px;
     align-items: flex-start;
     gap: 10px;
@@ -298,6 +297,12 @@
     border-radius: 12px;
     overflow: hidden;
 }
+
+.gallery-design {
+    justify-content: center;
+    display: grid;
+}  
+
 
 .event-mbtns {
     align-content: center;
@@ -472,6 +477,13 @@
     width: 113.9px;
     height: 113.9px;
 }
+
+.back-rent-img {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+  }
+
 
 @media (max-width: 767px) {
     .rent-space-div {
